@@ -35,7 +35,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 @Controller
-public class UserApiAct {
+public class MemberUserApiAct {
 	
 	/**
 	 * 获取用户状态API

@@ -32,9 +32,9 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-public class CmsGuestbookApiAct {
+public class AssistCmsGuestbookApiAct {
 	private static final Logger log = LoggerFactory
-			.getLogger(CmsGuestbookApiAct.class);
+			.getLogger(AssistCmsGuestbookApiAct.class);
 	
 	@SuppressWarnings("unchecked")
 	@RequestMapping("/guestbook/list")

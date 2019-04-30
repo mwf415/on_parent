@@ -54,7 +54,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-public class UserApiAct {
+public class FrontUserApiAct {
 	
 	private final String WEIXIN_JSCODE_2_SESSION_URL="weixin.jscode2sessionUrl";
 	

@@ -29,7 +29,7 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-public class CmsSmsApiAct {
+public class FrontCmsSmsApiAct {
 	/**
 	 * 发送短信，若配置为手机注册-不需要验证图形验证码，若未配置-需要验证图形验证码
 	 * @param mobilePhone 手机号

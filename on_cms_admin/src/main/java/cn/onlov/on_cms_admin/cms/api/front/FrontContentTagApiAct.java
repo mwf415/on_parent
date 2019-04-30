@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-public class ContentTagApiAct {
+public class FrontContentTagApiAct {
 	
 	/**
 	 * Tag关键词列表API

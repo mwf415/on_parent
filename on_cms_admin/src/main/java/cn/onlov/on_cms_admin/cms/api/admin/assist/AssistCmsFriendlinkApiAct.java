@@ -28,9 +28,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-public class CmsFriendlinkApiAct {
+public class AssistCmsFriendlinkApiAct {
 	private static final Logger log = LoggerFactory
-			.getLogger(CmsFriendlinkApiAct.class);
+			.getLogger(AssistCmsFriendlinkApiAct.class);
 	
 	@RequestMapping("/friendlink/list")
 	public void list(Integer queryCtgId,Boolean enabled,

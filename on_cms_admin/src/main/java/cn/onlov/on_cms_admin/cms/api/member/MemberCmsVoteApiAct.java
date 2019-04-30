@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class CmsVoteApiAct extends AbstractVote {
+public class MemberCmsVoteApiAct extends AbstractVote {
 	/**
 	 * 投票API
 	 * @param siteId 站点ID 非必选 默认当前站

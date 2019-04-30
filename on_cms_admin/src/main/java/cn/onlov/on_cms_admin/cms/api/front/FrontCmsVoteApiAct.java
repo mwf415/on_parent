@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-public class CmsVoteApiAct extends AbstractVote {
+public class FrontCmsVoteApiAct extends AbstractVote {
 	
 	/**
 	 * 调查列表API

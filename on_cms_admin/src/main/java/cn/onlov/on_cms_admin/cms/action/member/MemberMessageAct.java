@@ -43,8 +43,8 @@ import static cn.onlov.on_cms_common.common.page.SimplePage.cpn;
  * 
  */
 @Controller
-public class MessageAct {
-	private static final Logger log = LoggerFactory.getLogger(MessageAct.class);
+public class MemberMessageAct {
+	private static final Logger log = LoggerFactory.getLogger(MemberMessageAct.class);
 
 	public static final String MESSAGE_IN_BOX_LIST = "tpl.messageInBoxLists";
 	public static final String MESSAGE_DRAFT_LIST = "tpl.messageDraftLists";

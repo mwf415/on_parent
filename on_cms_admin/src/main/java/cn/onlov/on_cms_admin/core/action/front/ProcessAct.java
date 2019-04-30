@@ -29,7 +29,7 @@ public class ProcessAct {
 	public String process(HttpServletRequest request,
 			HttpServletResponse response) {
 		String returnUrl = RequestUtils.getQueryParam(request,
-				LoginAct.RETURN_URL);
+				FrontLoginAct.RETURN_URL);
 		String authId = RequestUtils.getQueryParam(request, AUTH_KEY);
 		Authentication auth = authMng.retrieve(authId);
 		if (auth != null) {

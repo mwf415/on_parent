@@ -29,8 +29,8 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-public class CmsSmsApiAct {
-	private static final Logger log = LoggerFactory.getLogger(CmsSmsApiAct.class);
+public class AdminCmsSmsApiAct {
+	private static final Logger log = LoggerFactory.getLogger(AdminCmsSmsApiAct.class);
 	
 	@SuppressWarnings("unchecked")
 	@RequestMapping("/sms/list")

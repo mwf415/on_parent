@@ -32,7 +32,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class ContentApiAct {
+public class MemberContentApiAct {
 	//顶
 	private static final String OPERATE_UP="up";
 	//踩

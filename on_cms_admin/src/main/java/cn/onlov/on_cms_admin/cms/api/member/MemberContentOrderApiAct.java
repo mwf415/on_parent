@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-public class ContentOrderApiAct {
+public class MemberContentOrderApiAct {
 	private static final int OPERATOR_BUY=1;
 	private static final int OPERATOR_ORDER=2;
 	private static final int OPERATOR_CHARGELIST=3;

@@ -33,7 +33,7 @@ import static cn.onlov.on_cms_common.core.manager.AuthenticationMng.AUTH_KEY;
  * </ul>
  */
 @Controller
-public class LoginAct {
+public class FrontLoginAct {
 	public static final String PROCESS_URL = "processUrl";
 	public static final String RETURN_URL = "returnUrl";
 	public static final String MESSAGE = "message";

@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-public class CmsFriendlinkApiAct {
+public class FrontCmsFriendlinkApiAct {
 	
 	/**
 	 * @param siteId 站点ID  非必选

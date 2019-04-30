@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-public class TopicApiAct {
+public class FrontTopicApiAct {
 	
 	/**
 	 * 专题列表API

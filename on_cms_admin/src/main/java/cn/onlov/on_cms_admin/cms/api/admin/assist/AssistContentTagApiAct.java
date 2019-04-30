@@ -24,8 +24,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-public class ContentTagApiAct {
-	private static final Logger log = LoggerFactory.getLogger(ContentTagApiAct.class);
+public class AssistContentTagApiAct {
+	private static final Logger log = LoggerFactory.getLogger(AssistContentTagApiAct.class);
 	
 	@SuppressWarnings("unchecked")
 	@RequestMapping("/tag/list")

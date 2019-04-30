@@ -52,8 +52,8 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class ContentApiAct {
-	private static final Logger log = LoggerFactory.getLogger(ContentApiAct.class);
+public class AdminContentApiAct {
+	private static final Logger log = LoggerFactory.getLogger(AdminContentApiAct.class);
 	
 	@RequestMapping("/content/tree")
 	public void tree(Boolean hasContent,String root, Integer https,HttpServletRequest request,

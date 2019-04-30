@@ -30,6 +30,12 @@ public class AdvertisingAct {
 	public static final String TPL_AD = "tpl.advertising";
 	public static final String TPL_ADSPACE = "tpl.adspace";
 
+	@Autowired
+	private CmsAdvertisingMng cmsAdvertisingMng;
+
+	@Autowired
+	private CmsAdvertisingSpaceMng cmsAdvertisingSpaceMng;
+
 	@RequestMapping(value = "/ad.jspx")
 	public String ad(Integer id, HttpServletRequest request,
 			HttpServletResponse response, ModelMap model) {
@@ -80,8 +86,5 @@ public class AdvertisingAct {
 		response.setDateHeader("Expires", 0);
 	}
 
-	@Autowired
-	private CmsAdvertisingMng cmsAdvertisingMng;
-	@Autowired
-	private CmsAdvertisingSpaceMng cmsAdvertisingSpaceMng;
+
 }

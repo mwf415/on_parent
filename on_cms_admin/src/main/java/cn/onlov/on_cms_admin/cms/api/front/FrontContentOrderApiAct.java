@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-public class ContentOrderApiAct {
+public class FrontContentOrderApiAct {
 	/**
 	 * 内容打赏购买记录
 	 * @param contentId  内容ID 必选 

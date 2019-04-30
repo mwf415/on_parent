@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-public class CmsGuestbookApiAct {
+public class MemberCmsGuestbookApiAct {
 	/**
 	 * 留言发布API
 	 * @param siteId 站点ID 非必选 默认当前站

@@ -31,8 +31,8 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-public class CmsCommentApiAct {
-	private static final Logger log = LoggerFactory.getLogger(CmsCommentApiAct.class);
+public class AdminCmsCommentApiAct {
+	private static final Logger log = LoggerFactory.getLogger(AdminCmsCommentApiAct.class);
 
 	@SuppressWarnings("unchecked")
 	@RequestMapping("/comment/list_by_content")

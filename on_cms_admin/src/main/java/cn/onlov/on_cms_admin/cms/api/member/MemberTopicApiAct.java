@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Controller
-public class TopicApiAct {
+public class MemberTopicApiAct {
 	/**
 	 * 专题保存接口
 	 * @param channelId 栏目ID 非必选

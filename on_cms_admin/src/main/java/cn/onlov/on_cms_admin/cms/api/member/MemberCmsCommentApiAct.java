@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-public class CmsCommentApiAct {
+public class MemberCmsCommentApiAct {
 	/**
 	 * 发布评论
 	 * @param contentId  内容ID  必选

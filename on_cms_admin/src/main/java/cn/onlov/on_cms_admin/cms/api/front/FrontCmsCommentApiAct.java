@@ -1,12 +1,11 @@
 package cn.onlov.on_cms_admin.cms.api.front;
 
+
 import cn.onlov.on_cms_common.cms.api.ApiResponse;
 import cn.onlov.on_cms_common.cms.api.Constants;
 import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.entity.assist.CmsGuestbook;
-import cn.onlov.on_cms_common.cms.entity.assist.CmsGuestbookCtg;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsGuestbookCtgMng;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsGuestbookMng;
+import cn.onlov.on_cms_common.cms.entity.assist.CmsComment;
+import cn.onlov.on_cms_common.cms.manager.assist.CmsCommentMng;
 import cn.onlov.on_cms_common.common.web.ResponseUtils;
 import cn.onlov.on_cms_common.core.web.util.CmsUtils;
 import org.json.JSONArray;
@@ -20,21 +19,23 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-public class CmsGuestbookApiAct {
+public class FrontCmsCommentApiAct {
 	
 	/**
-	 * 留言列表API
-	 * @param siteId 站点ID  非必选
-	 * @param ctgId 分类ID  非必选
-	 * @param checked 是否审核  非必选
-	 * @param recommend 是否推荐  非必选
-	 * @param orderBy 排序 0升序  1降序   默认降序
+	 * 评论列表
+	 * @param siteId 站点ID 非必选 
+	 * @param contentId 内容ID 非必选 
+	 * @param parentId 父评论ID 非必选 
+	 * @param greaterThen 支持数大于 非必选 
+	 * @param checked 是否审核 非必选 
+	 * @param recommend 是否推荐 非必选 
+	 * @param orderBy 是否推荐 0升序  1降序 非必选 默认1
 	 * @param first 开始
 	 * @param count 数量
 	 */
-	@RequestMapping(value = "/guestbook/list")
-	public void guestbookList(Integer siteId,Integer ctgId,
-			Short checked,Boolean recommend,Integer orderBy,
+	@RequestMapping(value = "/comment/list")
+	public void commentList(Integer siteId,Integer contentId,Integer parentId,
+			Integer greaterThen,Short checked,Boolean recommend,Integer orderBy,
 			Integer first,Integer count,
 			HttpServletRequest request,HttpServletResponse response) 
 					throws JSONException {
@@ -51,9 +52,9 @@ public class CmsGuestbookApiAct {
 		if(orderBy!=null&&orderBy.equals(0)){
 			orderDesc=false;
 		}
-		List<CmsGuestbook> list = cmsGuestbookMng.getList(siteId,
-				ctgId, null,recommend, checked,
-				orderDesc, orderDesc, first, count);
+		List<CmsComment> list = cmsCommentMng.getListForTag(siteId,
+				contentId,parentId, greaterThen,
+				checked, recommend, orderDesc,first,count);
 		JSONArray jsonArray=new JSONArray();
 		if(list!=null&&list.size()>0){
 			for(int i=0;i<list.size();i++){
@@ -68,45 +69,20 @@ public class CmsGuestbookApiAct {
 	}
 	
 	/**
-	 * 留言类别API
-	 * @param siteId 站点id
+	 * 获取单个评论
+	 * @param id 评论ID
 	 */
-	@RequestMapping(value = "/guestbookctg/list")
-	public void guestbookCtgList(Integer siteId,
-			HttpServletRequest request,HttpServletResponse response) 
-					throws JSONException {
-		if (siteId == null) {
-			siteId = CmsUtils.getSiteId(request);
-		}
-		List<CmsGuestbookCtg> list = cmsGuestbookCtgMng.getList(siteId);
-		JSONArray jsonArray=new JSONArray();
-		if(list!=null&&list.size()>0){
-			for(int i=0;i<list.size();i++){
-				jsonArray.put(i, list.get(i).convertToJson());
-			}
-		}
-		String body = jsonArray.toString();
-		String message = Constants.API_MESSAGE_SUCCESS;
-		String code = ResponseCode.API_CODE_CALL_SUCCESS;
-		ApiResponse apiResponse = new ApiResponse(request, body, message, code);
-		ResponseUtils.renderApiJson(response, request, apiResponse);
-	}
-	
-	/**
-	 * 留言详情获取API
-	 * @param id 留言ID 必选
-	 */
-	@RequestMapping(value = "/guestbook/get")
-	public void guestbookGet(Integer id,
+	@RequestMapping(value = "/comment/get")
+	public void commentGet(Integer id,
 			HttpServletRequest request,HttpServletResponse response) 
 					throws JSONException {
 		String body = "\"\"";
 		String message = Constants.API_MESSAGE_PARAM_REQUIRED;
 		String code = ResponseCode.API_CODE_PARAM_REQUIRED;
 		if (id!=null) {
-			CmsGuestbook guestbook = cmsGuestbookMng.findById(id);
-			if (guestbook!=null) {
-				body = guestbook.convertToJson().toString();
+			CmsComment comment = cmsCommentMng.findById(id);
+			if (comment!=null) {
+				body = comment.convertToJson().toString();
 				message = Constants.API_MESSAGE_SUCCESS;
 				code = ResponseCode.API_CODE_CALL_SUCCESS;
 			}else{
@@ -119,8 +95,6 @@ public class CmsGuestbookApiAct {
 	}
 	
 	@Autowired
-	protected CmsGuestbookMng cmsGuestbookMng;
-	@Autowired
-	private CmsGuestbookCtgMng cmsGuestbookCtgMng;
+	protected CmsCommentMng cmsCommentMng;
 }
 

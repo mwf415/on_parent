@@ -26,7 +26,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-public class ContentApiAct {
+public class FrontContentApiAct {
 	
 	/**
 	 * 内容列表API

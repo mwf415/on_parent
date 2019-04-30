@@ -28,9 +28,9 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-public class MessageAct {
+public class FrontMessageAct {
 	private static final Logger log = LoggerFactory
-			.getLogger(MessageAct.class);
+			.getLogger(FrontMessageAct.class);
 	
 	/**
 	 * 微信开发者验证URL

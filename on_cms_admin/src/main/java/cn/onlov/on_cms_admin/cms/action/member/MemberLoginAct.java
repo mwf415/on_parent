@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 
 
 @Controller
-public class LoginAct {
+public class MemberLoginAct {
 	public static final String LOGIN_CSI = "tpl.loginCsi";
 	public static final String TPL_SPACE = "tpl.space";
 
