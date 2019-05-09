@@ -1,15 +1,15 @@
 package cn.onlov.on_cms_admin.cms.action.member;
 
-import cn.onlov.on_cms_common.cms.manager.assist.CmsFileMng;
-import cn.onlov.on_cms_common.core.entity.CmsOss;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.entity.Ftp;
-import cn.onlov.on_cms_common.core.manager.CmsUserMng;
-import cn.onlov.on_cms_common.core.manager.DbFileMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.manager.assist.CmsFileMng;
+import cn.onlov.cms.common.core.entity.CmsOss;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.entity.Ftp;
+import cn.onlov.cms.common.core.manager.CmsUserMng;
+import cn.onlov.cms.common.core.manager.DbFileMng;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Locale;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_MEMBER;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_MEMBER;
 
 /**
  * 会员投稿Action

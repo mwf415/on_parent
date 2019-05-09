@@ -1,11 +1,11 @@
 package cn.onlov.on_cms_admin.plug.weixin.action.front;
 
 
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.plug.weixin.entity.WeixinMessage;
-import cn.onlov.on_cms_common.plug.weixin.manager.WeixinMessageMng;
-import cn.onlov.on_cms_common.plug.weixin.manager.WeixinMng;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.plug.weixin.entity.WeixinMessage;
+import cn.onlov.cms.common.plug.weixin.manager.WeixinMessageMng;
+import cn.onlov.cms.common.plug.weixin.manager.WeixinMng;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;

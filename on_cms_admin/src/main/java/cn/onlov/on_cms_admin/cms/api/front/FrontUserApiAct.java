@@ -1,39 +1,39 @@
 package cn.onlov.on_cms_admin.cms.api.front;
 
-import cn.onlov.on_cms_common.cms.annotation.SignValidate;
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.ApiValidate;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.entity.assist.CmsWebservice;
-import cn.onlov.on_cms_common.cms.entity.main.ApiAccount;
-import cn.onlov.on_cms_common.cms.entity.main.ApiRecord;
-import cn.onlov.on_cms_common.cms.entity.main.ApiUserLogin;
-import cn.onlov.on_cms_common.cms.entity.main.CmsThirdAccount;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsWebserviceMng;
-import cn.onlov.on_cms_common.cms.manager.main.ApiAccountMng;
-import cn.onlov.on_cms_common.cms.manager.main.ApiRecordMng;
-import cn.onlov.on_cms_common.cms.manager.main.ApiUserLoginMng;
-import cn.onlov.on_cms_common.cms.manager.main.CmsThirdAccountMng;
-import cn.onlov.on_cms_common.cms.service.ImageSvc;
-import cn.onlov.on_cms_common.common.security.encoder.PwdEncoder;
-import cn.onlov.on_cms_common.common.util.AES128Util;
-import cn.onlov.on_cms_common.common.util.DateUtils;
-import cn.onlov.on_cms_common.common.util.Num62;
-import cn.onlov.on_cms_common.common.util.PropertyUtils;
-import cn.onlov.on_cms_common.common.web.HttpClientUtil;
-import cn.onlov.on_cms_common.common.web.LoginUtils;
-import cn.onlov.on_cms_common.common.web.RequestUtils;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.common.web.springmvc.RealPathResolver;
-import cn.onlov.on_cms_common.core.entity.*;
-import cn.onlov.on_cms_common.core.manager.CmsConfigMng;
-import cn.onlov.on_cms_common.core.manager.CmsLogMng;
-import cn.onlov.on_cms_common.core.manager.CmsUserMng;
-import cn.onlov.on_cms_common.core.manager.UnifiedUserMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.cms.annotation.SignValidate;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.ApiValidate;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.cms.entity.assist.CmsWebservice;
+import cn.onlov.cms.common.cms.entity.main.ApiAccount;
+import cn.onlov.cms.common.cms.entity.main.ApiRecord;
+import cn.onlov.cms.common.cms.entity.main.ApiUserLogin;
+import cn.onlov.cms.common.cms.entity.main.CmsThirdAccount;
+import cn.onlov.cms.common.cms.manager.assist.CmsWebserviceMng;
+import cn.onlov.cms.common.cms.manager.main.ApiAccountMng;
+import cn.onlov.cms.common.cms.manager.main.ApiRecordMng;
+import cn.onlov.cms.common.cms.manager.main.ApiUserLoginMng;
+import cn.onlov.cms.common.cms.manager.main.CmsThirdAccountMng;
+import cn.onlov.cms.common.cms.service.ImageSvc;
+import cn.onlov.cms.common.common.security.encoder.PwdEncoder;
+import cn.onlov.cms.common.common.util.AES128Util;
+import cn.onlov.cms.common.common.util.DateUtils;
+import cn.onlov.cms.common.common.util.Num62;
+import cn.onlov.cms.common.common.util.PropertyUtils;
+import cn.onlov.cms.common.common.web.HttpClientUtil;
+import cn.onlov.cms.common.common.web.LoginUtils;
+import cn.onlov.cms.common.common.web.RequestUtils;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.common.web.springmvc.RealPathResolver;
+import cn.onlov.cms.common.core.entity.*;
+import cn.onlov.cms.common.core.manager.CmsConfigMng;
+import cn.onlov.cms.common.core.manager.CmsLogMng;
+import cn.onlov.cms.common.core.manager.CmsUserMng;
+import cn.onlov.cms.common.core.manager.UnifiedUserMng;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.SecurityUtils;
@@ -592,7 +592,7 @@ public class FrontUserApiAct {
 	private void initWeiXinJsCode2SessionUrl(){
 		if(getWeiXinJsCode2SessionUrl()==null){
 			setWeiXinJsCode2SessionUrl(PropertyUtils.getPropertyValue(
-					new File(realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.JEECMS_CONFIG)),WEIXIN_JSCODE_2_SESSION_URL));
+					new File(realPathResolver.get(cn.onlov.cms.common.cms.Constants.JEECMS_CONFIG)),WEIXIN_JSCODE_2_SESSION_URL));
 		}
 	}
 	

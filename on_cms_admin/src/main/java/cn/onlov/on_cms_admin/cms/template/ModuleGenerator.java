@@ -200,7 +200,7 @@ public class ModuleGenerator {
 	}
 
 	public static void main(String[] args) {
-		String packName = "cn.onlov.on_cms_common.common.developer.template";
+		String packName = "cn.onlov.cms.common.common.developer.template";
 		String fileName = "template.properties";
 		new ModuleGenerator(packName, fileName).generate();
 	}

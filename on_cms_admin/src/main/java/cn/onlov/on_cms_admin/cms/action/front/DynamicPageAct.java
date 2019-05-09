@@ -1,27 +1,27 @@
 package cn.onlov.on_cms_admin.cms.action.front;
 
-import cn.onlov.on_cms_common.cms.entity.main.Channel;
-import cn.onlov.on_cms_common.cms.entity.main.Content;
-import cn.onlov.on_cms_common.cms.entity.main.ContentCheck;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsKeywordMng;
-import cn.onlov.on_cms_common.cms.manager.main.ChannelMng;
-import cn.onlov.on_cms_common.cms.manager.main.ContentBuyMng;
-import cn.onlov.on_cms_common.cms.manager.main.ContentMng;
-import cn.onlov.on_cms_common.cms.web.Token;
-import cn.onlov.on_cms_common.common.page.Paginable;
-import cn.onlov.on_cms_common.common.page.SimplePage;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.common.web.springmvc.RealPathResolver;
-import cn.onlov.on_cms_common.core.entity.CmsConfig;
-import cn.onlov.on_cms_common.core.entity.CmsGroup;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.manager.CmsConfigMng;
-import cn.onlov.on_cms_common.core.manager.CmsSiteMng;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
-import cn.onlov.on_cms_common.core.web.util.URLHelper;
-import cn.onlov.on_cms_common.core.web.util.URLHelper.PageInfo;
+import cn.onlov.cms.common.cms.entity.main.Channel;
+import cn.onlov.cms.common.cms.entity.main.Content;
+import cn.onlov.cms.common.cms.entity.main.ContentCheck;
+import cn.onlov.cms.common.cms.manager.assist.CmsKeywordMng;
+import cn.onlov.cms.common.cms.manager.main.ChannelMng;
+import cn.onlov.cms.common.cms.manager.main.ContentBuyMng;
+import cn.onlov.cms.common.cms.manager.main.ContentMng;
+import cn.onlov.cms.common.cms.web.Token;
+import cn.onlov.cms.common.common.page.Paginable;
+import cn.onlov.cms.common.common.page.SimplePage;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.common.web.springmvc.RealPathResolver;
+import cn.onlov.cms.common.core.entity.CmsConfig;
+import cn.onlov.cms.common.core.entity.CmsGroup;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.manager.CmsConfigMng;
+import cn.onlov.cms.common.core.manager.CmsSiteMng;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.core.web.util.URLHelper;
+import cn.onlov.cms.common.core.web.util.URLHelper.PageInfo;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,8 +37,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Set;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_INDEX;
-import static cn.onlov.on_cms_common.common.web.Constants.*;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_INDEX;
+import static cn.onlov.cms.common.common.web.Constants.*;
 
 @Controller
 public class DynamicPageAct {

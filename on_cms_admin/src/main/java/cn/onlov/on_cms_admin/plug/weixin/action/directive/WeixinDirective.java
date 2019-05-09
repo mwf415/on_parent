@@ -1,11 +1,11 @@
 package cn.onlov.on_cms_admin.plug.weixin.action.directive;
 
-import cn.onlov.on_cms_common.common.web.freemarker.DefaultObjectWrapperBuilderFactory;
-import cn.onlov.on_cms_common.common.web.freemarker.DirectiveUtils;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
-import cn.onlov.on_cms_common.plug.weixin.entity.Weixin;
-import cn.onlov.on_cms_common.plug.weixin.manager.WeixinMng;
+import cn.onlov.cms.common.common.web.freemarker.DefaultObjectWrapperBuilderFactory;
+import cn.onlov.cms.common.common.web.freemarker.DirectiveUtils;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.plug.weixin.entity.Weixin;
+import cn.onlov.cms.common.plug.weixin.manager.WeixinMng;
 import freemarker.core.Environment;
 import freemarker.template.TemplateDirectiveBody;
 import freemarker.template.TemplateDirectiveModel;
@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import static cn.onlov.on_cms_common.common.web.freemarker.DirectiveUtils.OUT_BEAN;
+import static cn.onlov.cms.common.common.web.freemarker.DirectiveUtils.OUT_BEAN;
 
 public class WeixinDirective implements TemplateDirectiveModel {
 

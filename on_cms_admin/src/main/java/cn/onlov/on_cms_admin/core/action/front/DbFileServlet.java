@@ -1,7 +1,7 @@
 package cn.onlov.on_cms_admin.core.action.front;
 
-import cn.onlov.on_cms_common.core.entity.DbFile;
-import cn.onlov.on_cms_common.core.manager.DbFileMng;
+import cn.onlov.cms.common.core.entity.DbFile;
+import cn.onlov.cms.common.core.manager.DbFileMng;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.web.context.WebApplicationContext;

@@ -1,12 +1,12 @@
 package cn.onlov.on_cms_admin.cms.api.admin.assist;
 
-import cn.onlov.on_cms_common.cms.annotation.SignValidate;
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.lucene.LuceneContentSvc;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.cms.annotation.SignValidate;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.cms.lucene.LuceneContentSvc;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

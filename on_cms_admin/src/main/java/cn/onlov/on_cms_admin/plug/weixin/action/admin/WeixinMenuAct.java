@@ -1,13 +1,13 @@
 package cn.onlov.on_cms_admin.plug.weixin.action.admin;
 
-import cn.onlov.on_cms_common.cms.service.WeiXinSvc;
-import cn.onlov.on_cms_common.common.page.Pagination;
-import cn.onlov.on_cms_common.common.web.CookieUtils;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.plug.weixin.entity.WeixinMenu;
-import cn.onlov.on_cms_common.plug.weixin.manager.WeixinMenuMng;
+import cn.onlov.cms.common.cms.service.WeiXinSvc;
+import cn.onlov.cms.common.common.page.Pagination;
+import cn.onlov.cms.common.common.web.CookieUtils;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.plug.weixin.entity.WeixinMenu;
+import cn.onlov.cms.common.plug.weixin.manager.WeixinMenuMng;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static cn.onlov.on_cms_common.common.page.SimplePage.cpn;
+import static cn.onlov.cms.common.common.page.SimplePage.cpn;
 
 @Controller
 public class WeixinMenuAct {

@@ -1,19 +1,19 @@
 package cn.onlov.on_cms_admin.cms.action.member;
 
-import cn.onlov.on_cms_common.cms.entity.main.ApiAccount;
-import cn.onlov.on_cms_common.cms.entity.main.ApiUserLogin;
-import cn.onlov.on_cms_common.cms.manager.main.ApiAccountMng;
-import cn.onlov.on_cms_common.cms.manager.main.ApiUserLoginMng;
-import cn.onlov.on_cms_common.cms.web.Token;
-import cn.onlov.on_cms_common.common.util.AES128Util;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.manager.ConfigMng;
-import cn.onlov.on_cms_common.core.manager.UnifiedUserMng;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.entity.main.ApiAccount;
+import cn.onlov.cms.common.cms.entity.main.ApiUserLogin;
+import cn.onlov.cms.common.cms.manager.main.ApiAccountMng;
+import cn.onlov.cms.common.cms.manager.main.ApiUserLoginMng;
+import cn.onlov.cms.common.cms.web.Token;
+import cn.onlov.cms.common.common.util.AES128Util;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.manager.ConfigMng;
+import cn.onlov.cms.common.core.manager.UnifiedUserMng;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_MEMBER;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_MEMBER;
 import static org.apache.shiro.web.filter.authc.FormAuthenticationFilter.DEFAULT_ERROR_KEY_ATTRIBUTE_NAME;
 
 @Controller

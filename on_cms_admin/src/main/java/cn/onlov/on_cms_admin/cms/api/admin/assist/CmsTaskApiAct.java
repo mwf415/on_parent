@@ -1,20 +1,20 @@
 package cn.onlov.on_cms_admin.cms.api.admin.assist;
 
-import cn.onlov.on_cms_common.cms.annotation.SignValidate;
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.ApiValidate;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.entity.assist.CmsTask;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsTaskMng;
-import cn.onlov.on_cms_common.common.page.Pagination;
-import cn.onlov.on_cms_common.common.util.StrUtils;
-import cn.onlov.on_cms_common.common.web.RequestUtils;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.cms.annotation.SignValidate;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.ApiValidate;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.cms.entity.assist.CmsTask;
+import cn.onlov.cms.common.cms.manager.assist.CmsTaskMng;
+import cn.onlov.cms.common.common.page.Pagination;
+import cn.onlov.cms.common.common.util.StrUtils;
+import cn.onlov.cms.common.common.web.RequestUtils;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
 import org.json.JSONArray;
 import org.quartz.*;
 import org.slf4j.Logger;
@@ -37,11 +37,11 @@ public class CmsTaskApiAct {
 	private static final Map<String, String> taskClasss = new HashMap<>();
 	
 	private void init() {
-		taskClasss.put("cn.onlov.on_cms_common.cms.task.job.IndexStaticJob", "cn.onlov.on_cms_common.cms.task.job.IndexStaticJob");
-		taskClasss.put("cn.onlov.on_cms_common.cms.task.job.ChannelStaticJob", "cn.onlov.on_cms_common.cms.task.job.ChannelStaticJob");
-		taskClasss.put("cn.onlov.on_cms_common.cms.task.job.ContentStaticJob", "cn.onlov.on_cms_common.cms.task.job.ContentStaticJob");
-		taskClasss.put("cn.onlov.on_cms_common.cms.task.job.AcquisiteJob", "cn.onlov.on_cms_common.cms.task.job.AcquisiteJob");
-		taskClasss.put("cn.onlov.on_cms_common.cms.task.job.DistributeJob", "cn.onlov.on_cms_common.cms.task.job.DistributeJob");
+		taskClasss.put("cn.onlov.cms.common.cms.task.job.IndexStaticJob", "cn.onlov.cms.common.cms.task.job.IndexStaticJob");
+		taskClasss.put("cn.onlov.cms.common.cms.task.job.ChannelStaticJob", "cn.onlov.cms.common.cms.task.job.ChannelStaticJob");
+		taskClasss.put("cn.onlov.cms.common.cms.task.job.ContentStaticJob", "cn.onlov.cms.common.cms.task.job.ContentStaticJob");
+		taskClasss.put("cn.onlov.cms.common.cms.task.job.AcquisiteJob", "cn.onlov.cms.common.cms.task.job.AcquisiteJob");
+		taskClasss.put("cn.onlov.cms.common.cms.task.job.DistributeJob", "cn.onlov.cms.common.cms.task.job.DistributeJob");
 	}
 	
 	@SuppressWarnings("unchecked")

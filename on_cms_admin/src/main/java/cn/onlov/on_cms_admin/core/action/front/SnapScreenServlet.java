@@ -1,9 +1,9 @@
 package cn.onlov.on_cms_admin.core.action.front;
 
-import cn.onlov.on_cms_common.common.ueditor.LocalizedMessages;
-import cn.onlov.on_cms_common.common.upload.UploadUtils;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.springmvc.RealPathResolver;
+import cn.onlov.cms.common.common.ueditor.LocalizedMessages;
+import cn.onlov.cms.common.common.upload.UploadUtils;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.springmvc.RealPathResolver;
 import org.apache.commons.fileupload.FileItemIterator;
 import org.apache.commons.fileupload.FileItemStream;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 
-import static cn.onlov.on_cms_common.cms.Constants.SNAP_PATH;
+import static cn.onlov.cms.common.cms.Constants.SNAP_PATH;
 
 @SuppressWarnings("serial")
 public class SnapScreenServlet extends HttpServlet {

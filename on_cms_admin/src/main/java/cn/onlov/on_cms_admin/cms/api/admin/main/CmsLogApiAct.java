@@ -1,15 +1,15 @@
 package cn.onlov.on_cms_admin.cms.api.admin.main;
 
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.common.page.Pagination;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.core.entity.CmsLog;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.manager.CmsLogMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.common.page.Pagination;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.core.entity.CmsLog;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.manager.CmsLogMng;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
 import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

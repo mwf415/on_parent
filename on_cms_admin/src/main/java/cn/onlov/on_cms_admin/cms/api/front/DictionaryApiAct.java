@@ -1,11 +1,11 @@
 package cn.onlov.on_cms_admin.cms.api.front;
 
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.core.entity.CmsDictionary;
-import cn.onlov.on_cms_common.core.manager.CmsDictionaryMng;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.core.entity.CmsDictionary;
+import cn.onlov.cms.common.core.manager.CmsDictionaryMng;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONException;

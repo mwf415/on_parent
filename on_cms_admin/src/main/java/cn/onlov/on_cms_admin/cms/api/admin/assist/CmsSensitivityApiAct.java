@@ -1,16 +1,16 @@
 package cn.onlov.on_cms_admin.cms.api.admin.assist;
 
-import cn.onlov.on_cms_common.cms.annotation.SignValidate;
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.ApiValidate;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.entity.assist.CmsSensitivity;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsSensitivityMng;
-import cn.onlov.on_cms_common.common.util.StrUtils;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.core.manager.CmsLogMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
+import cn.onlov.cms.common.cms.annotation.SignValidate;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.ApiValidate;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.cms.entity.assist.CmsSensitivity;
+import cn.onlov.cms.common.cms.manager.assist.CmsSensitivityMng;
+import cn.onlov.cms.common.common.util.StrUtils;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.core.manager.CmsLogMng;
+import cn.onlov.cms.common.core.web.WebErrors;
 import org.json.JSONArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

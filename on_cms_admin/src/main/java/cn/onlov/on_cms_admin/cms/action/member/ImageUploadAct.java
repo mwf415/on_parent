@@ -1,14 +1,14 @@
 package cn.onlov.on_cms_admin.cms.action.member;
 
-import cn.onlov.on_cms_common.common.image.ImageScale;
-import cn.onlov.on_cms_common.common.image.ImageUtils;
-import cn.onlov.on_cms_common.common.upload.FileRepository;
-import cn.onlov.on_cms_common.common.web.springmvc.RealPathResolver;
-import cn.onlov.on_cms_common.core.entity.*;
-import cn.onlov.on_cms_common.core.manager.DbFileMng;
-import cn.onlov.on_cms_common.core.web.WebCoreErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.common.image.ImageScale;
+import cn.onlov.cms.common.common.image.ImageUtils;
+import cn.onlov.cms.common.common.upload.FileRepository;
+import cn.onlov.cms.common.common.web.springmvc.RealPathResolver;
+import cn.onlov.cms.common.core.entity.*;
+import cn.onlov.cms.common.core.manager.DbFileMng;
+import cn.onlov.cms.common.core.web.WebCoreErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -27,7 +27,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Locale;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_MEMBER;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_MEMBER;
 
 @Controller
 public class ImageUploadAct {

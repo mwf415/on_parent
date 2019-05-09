@@ -1,6 +1,6 @@
 package #{action_p};
 
-import static cn.onlov.on_cms_common.common.page.SimplePage.cpn;
+import static cn.onlov.cms.common.common.page.SimplePage.cpn;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import #{entity_p}.#{Entity};
 
 import #{manager_p}.#{Entity}Mng;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.common.page.Pagination;
-import cn.onlov.on_cms_common.common.web.CookieUtils;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.common.page.Pagination;
+import cn.onlov.cms.common.common.web.CookieUtils;
 
 @Controller
 public class #{Entity}Act {

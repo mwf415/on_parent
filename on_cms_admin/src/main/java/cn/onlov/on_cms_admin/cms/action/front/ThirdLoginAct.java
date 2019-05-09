@@ -1,22 +1,22 @@
 package cn.onlov.on_cms_admin.cms.action.front;
 
 
-import cn.onlov.on_cms_common.cms.entity.main.CmsThirdAccount;
-import cn.onlov.on_cms_common.cms.manager.main.CmsThirdAccountMng;
-import cn.onlov.on_cms_common.cms.service.ImageSvc;
-import cn.onlov.on_cms_common.common.security.encoder.PwdEncoder;
-import cn.onlov.on_cms_common.common.util.Num62;
-import cn.onlov.on_cms_common.common.util.PropertyUtils;
-import cn.onlov.on_cms_common.common.web.*;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.common.web.springmvc.RealPathResolver;
-import cn.onlov.on_cms_common.core.entity.*;
-import cn.onlov.on_cms_common.core.manager.CmsConfigMng;
-import cn.onlov.on_cms_common.core.manager.CmsUserMng;
-import cn.onlov.on_cms_common.core.manager.UnifiedUserMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.entity.main.CmsThirdAccount;
+import cn.onlov.cms.common.cms.manager.main.CmsThirdAccountMng;
+import cn.onlov.cms.common.cms.service.ImageSvc;
+import cn.onlov.cms.common.common.security.encoder.PwdEncoder;
+import cn.onlov.cms.common.common.util.Num62;
+import cn.onlov.cms.common.common.util.PropertyUtils;
+import cn.onlov.cms.common.common.web.*;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.common.web.springmvc.RealPathResolver;
+import cn.onlov.cms.common.core.entity.*;
+import cn.onlov.cms.common.core.manager.CmsConfigMng;
+import cn.onlov.cms.common.core.manager.CmsUserMng;
+import cn.onlov.cms.common.core.manager.UnifiedUserMng;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.client.ClientProtocolException;
@@ -40,7 +40,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import cn.onlov.on_cms_common.cms.Constants;
+import cn.onlov.cms.common.cms.Constants;
 
 
 /**

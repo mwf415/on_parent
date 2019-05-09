@@ -1,15 +1,15 @@
 package cn.onlov.on_cms_admin.cms.api.member;
 
-import cn.onlov.on_cms_common.cms.annotation.SignValidate;
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.ApiValidate;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.entity.main.CmsTopic;
-import cn.onlov.on_cms_common.cms.manager.main.ChannelMng;
-import cn.onlov.on_cms_common.cms.manager.main.CmsTopicMng;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.core.web.WebErrors;
+import cn.onlov.cms.common.cms.annotation.SignValidate;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.ApiValidate;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.cms.entity.main.CmsTopic;
+import cn.onlov.cms.common.cms.manager.main.ChannelMng;
+import cn.onlov.cms.common.cms.manager.main.CmsTopicMng;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.core.web.WebErrors;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;

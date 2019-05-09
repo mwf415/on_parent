@@ -1,28 +1,28 @@
 package cn.onlov.on_cms_admin.cms.api.admin.assist;
 
-import cn.onlov.on_cms_common.cms.annotation.SignValidate;
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.ApiValidate;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.entity.assist.CmsAccountDraw;
-import cn.onlov.on_cms_common.cms.entity.assist.CmsAccountPay;
-import cn.onlov.on_cms_common.cms.entity.assist.CmsConfigContentCharge;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsAccountDrawMng;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsAccountPayMng;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsConfigContentChargeMng;
-import cn.onlov.on_cms_common.common.page.Pagination;
-import cn.onlov.on_cms_common.common.security.encoder.Md5PwdEncoder;
-import cn.onlov.on_cms_common.common.util.Num62;
-import cn.onlov.on_cms_common.common.util.PropertyUtils;
-import cn.onlov.on_cms_common.common.util.StrUtils;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.springmvc.MessageResolver;
-import cn.onlov.on_cms_common.common.web.springmvc.RealPathResolver;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.manager.CmsUserMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.cms.annotation.SignValidate;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.ApiValidate;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.cms.entity.assist.CmsAccountDraw;
+import cn.onlov.cms.common.cms.entity.assist.CmsAccountPay;
+import cn.onlov.cms.common.cms.entity.assist.CmsConfigContentCharge;
+import cn.onlov.cms.common.cms.manager.assist.CmsAccountDrawMng;
+import cn.onlov.cms.common.cms.manager.assist.CmsAccountPayMng;
+import cn.onlov.cms.common.cms.manager.assist.CmsConfigContentChargeMng;
+import cn.onlov.cms.common.common.page.Pagination;
+import cn.onlov.cms.common.common.security.encoder.Md5PwdEncoder;
+import cn.onlov.cms.common.common.util.Num62;
+import cn.onlov.cms.common.common.util.PropertyUtils;
+import cn.onlov.cms.common.common.util.StrUtils;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.springmvc.MessageResolver;
+import cn.onlov.cms.common.common.web.springmvc.RealPathResolver;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.manager.CmsUserMng;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONArray;
@@ -108,7 +108,7 @@ public class CmsAccountPayApiAct {
 					code = ResponseCode.API_CODE_NOT_FOUND;
 				}else{
 					if (StringUtils.isBlank(getWeixinPayUrl())) {
-						setWeixinPayUrl(PropertyUtils.getPropertyValue(new File(realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.JEECMS_CONFIG)), WEIXIN_PAY_URL));
+						setWeixinPayUrl(PropertyUtils.getPropertyValue(new File(realPathResolver.get(cn.onlov.cms.common.cms.Constants.JEECMS_CONFIG)), WEIXIN_PAY_URL));
 					}
 					String statu = accountPayMng.weixinTransferPay(getWeixinPayUrl(), drawId, bean.getDrawUser(), user, bean.getApplyAmount() 
 							,System.currentTimeMillis()+RandomStringUtils.random(5,Num62.N10_CHARS), request, response, null);

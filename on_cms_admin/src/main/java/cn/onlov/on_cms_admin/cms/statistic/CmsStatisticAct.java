@@ -1,23 +1,23 @@
 package cn.onlov.on_cms_admin.cms.statistic;
 
-import cn.onlov.on_cms_common.cms.entity.main.Channel;
-import cn.onlov.on_cms_common.cms.entity.main.ContentCheck;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsSiteAccessCountMng;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsSiteAccessMng;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsSiteAccessPagesMng;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsSiteAccessStatisticMng;
-import cn.onlov.on_cms_common.cms.manager.main.ChannelMng;
-import cn.onlov.on_cms_common.cms.statistic.CmsStatistic;
-import cn.onlov.on_cms_common.cms.statistic.CmsStatistic.*;
-import cn.onlov.on_cms_common.cms.statistic.CmsStatisticSvc;
-import cn.onlov.on_cms_common.common.page.Pagination;
-import cn.onlov.on_cms_common.common.util.DateUtils;
-import cn.onlov.on_cms_common.common.web.CookieUtils;
-import cn.onlov.on_cms_common.common.web.RequestUtils;
-import cn.onlov.on_cms_common.common.web.springmvc.MessageResolver;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.manager.CmsUserMng;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.cms.entity.main.Channel;
+import cn.onlov.cms.common.cms.entity.main.ContentCheck;
+import cn.onlov.cms.common.cms.manager.assist.CmsSiteAccessCountMng;
+import cn.onlov.cms.common.cms.manager.assist.CmsSiteAccessMng;
+import cn.onlov.cms.common.cms.manager.assist.CmsSiteAccessPagesMng;
+import cn.onlov.cms.common.cms.manager.assist.CmsSiteAccessStatisticMng;
+import cn.onlov.cms.common.cms.manager.main.ChannelMng;
+import cn.onlov.cms.common.cms.statistic.CmsStatistic;
+import cn.onlov.cms.common.cms.statistic.CmsStatistic.*;
+import cn.onlov.cms.common.cms.statistic.CmsStatisticSvc;
+import cn.onlov.cms.common.common.page.Pagination;
+import cn.onlov.cms.common.common.util.DateUtils;
+import cn.onlov.cms.common.common.web.CookieUtils;
+import cn.onlov.cms.common.common.web.RequestUtils;
+import cn.onlov.cms.common.common.web.springmvc.MessageResolver;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.manager.CmsUserMng;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +29,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 import java.util.Map.Entry;
 
-import static cn.onlov.on_cms_common.cms.entity.assist.CmsSiteAccessStatistic.*;
-import static cn.onlov.on_cms_common.cms.statistic.CmsStatistic.*;
-import static cn.onlov.on_cms_common.common.page.SimplePage.cpn;
+import static cn.onlov.cms.common.cms.entity.assist.CmsSiteAccessStatistic.*;
+import static cn.onlov.cms.common.cms.statistic.CmsStatistic.*;
+import static cn.onlov.cms.common.common.page.SimplePage.cpn;
 
 @Controller
 public class CmsStatisticAct {

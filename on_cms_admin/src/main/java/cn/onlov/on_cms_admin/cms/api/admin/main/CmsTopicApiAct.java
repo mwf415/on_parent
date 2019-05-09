@@ -1,27 +1,27 @@
 package cn.onlov.on_cms_admin.cms.api.admin.main;
 
 import cn.onlov.on_cms_admin.cms.action.front.TopicAct;
-import cn.onlov.on_cms_common.cms.annotation.SignValidate;
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.ApiValidate;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.entity.main.Channel;
-import cn.onlov.on_cms_common.cms.entity.main.CmsTopic;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsFileMng;
-import cn.onlov.on_cms_common.cms.manager.main.ChannelMng;
-import cn.onlov.on_cms_common.cms.manager.main.CmsTopicMng;
-import cn.onlov.on_cms_common.common.page.Pagination;
-import cn.onlov.on_cms_common.common.util.ChineseCharToEn;
-import cn.onlov.on_cms_common.common.util.StrUtils;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.springmvc.MessageResolver;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.manager.CmsLogMng;
-import cn.onlov.on_cms_common.core.tpl.TplManager;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.CoreUtils;
+import cn.onlov.cms.common.cms.annotation.SignValidate;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.ApiValidate;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.cms.entity.main.Channel;
+import cn.onlov.cms.common.cms.entity.main.CmsTopic;
+import cn.onlov.cms.common.cms.manager.assist.CmsFileMng;
+import cn.onlov.cms.common.cms.manager.main.ChannelMng;
+import cn.onlov.cms.common.cms.manager.main.CmsTopicMng;
+import cn.onlov.cms.common.common.page.Pagination;
+import cn.onlov.cms.common.common.util.ChineseCharToEn;
+import cn.onlov.cms.common.common.util.StrUtils;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.springmvc.MessageResolver;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.manager.CmsLogMng;
+import cn.onlov.cms.common.core.tpl.TplManager;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.CoreUtils;
 import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONArray;
@@ -36,7 +36,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_TOPIC;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_TOPIC;
 
 @Controller
 public class CmsTopicApiAct {

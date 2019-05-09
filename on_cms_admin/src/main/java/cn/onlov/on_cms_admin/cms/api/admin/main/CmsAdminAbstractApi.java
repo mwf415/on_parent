@@ -1,9 +1,9 @@
 package cn.onlov.on_cms_admin.cms.api.admin.main;
 
-import cn.onlov.on_cms_common.cms.manager.assist.CmsWebserviceMng;
-import cn.onlov.on_cms_common.cms.manager.main.ChannelMng;
-import cn.onlov.on_cms_common.core.manager.*;
-import cn.onlov.on_cms_common.core.security.CmsAuthorizingRealm;
+import cn.onlov.cms.common.cms.manager.assist.CmsWebserviceMng;
+import cn.onlov.cms.common.cms.manager.main.ChannelMng;
+import cn.onlov.cms.common.core.manager.*;
+import cn.onlov.cms.common.core.security.CmsAuthorizingRealm;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class CmsAdminAbstractApi {

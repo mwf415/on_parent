@@ -1,17 +1,17 @@
 package cn.onlov.on_cms_admin.cms.api.admin.main;
 
 
-import cn.onlov.on_cms_common.cms.annotation.SignValidate;
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.ApiValidate;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.springmvc.RealPathResolver;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.manager.CmsSiteMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.cms.annotation.SignValidate;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.ApiValidate;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.springmvc.RealPathResolver;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.manager.CmsSiteMng;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +44,7 @@ public class CmsFireWallConfigApiAct {
 		String code = ResponseCode.API_CODE_CALL_SUCCESS;
 		InputStream in;
 		try {
-			in = new FileInputStream(realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.FIREWALL_CONFIGPATH));
+			in = new FileInputStream(realPathResolver.get(cn.onlov.cms.common.cms.Constants.FIREWALL_CONFIGPATH));
 		Properties p = new Properties();
 			p.load(in);
 			String password = p.getProperty(property_firewall_password);
@@ -100,7 +100,7 @@ public class CmsFireWallConfigApiAct {
 			}else{
 				InputStream in;
 				try {
-					in = new FileInputStream(realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.FIREWALL_CONFIGPATH));
+					in = new FileInputStream(realPathResolver.get(cn.onlov.cms.common.cms.Constants.FIREWALL_CONFIGPATH));
 					Properties p = new Properties();
 					p.load(in);
 					if(StringUtils.isNotBlank(password)){
@@ -113,7 +113,7 @@ public class CmsFireWallConfigApiAct {
 					p.setProperty(property_firewall_week,weeks);
 					p.setProperty(property_firewall_hour,hours);
 					p.setProperty(property_firewall_ips, ips);
-					OutputStream out = new FileOutputStream(realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.FIREWALL_CONFIGPATH));
+					OutputStream out = new FileOutputStream(realPathResolver.get(cn.onlov.cms.common.cms.Constants.FIREWALL_CONFIGPATH));
 					p.store(out, "update firewall config");
 					message = Constants.API_MESSAGE_SUCCESS;
 					code = ResponseCode.API_CODE_CALL_SUCCESS;
@@ -157,7 +157,7 @@ public class CmsFireWallConfigApiAct {
 	private boolean validatePassword(WebErrors errors,String password,HttpServletRequest request,HttpServletResponse response){
 		boolean result = false;
 		try {
-			InputStream in = new FileInputStream(realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.FIREWALL_CONFIGPATH));
+			InputStream in = new FileInputStream(realPathResolver.get(cn.onlov.cms.common.cms.Constants.FIREWALL_CONFIGPATH));
 			Properties p = new Properties();
 			p.load(in);
 			String pass = p.getProperty(property_firewall_password);

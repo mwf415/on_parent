@@ -1,14 +1,14 @@
 package cn.onlov.on_cms_admin.cms.api.front;
 
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.entity.main.Content;
-import cn.onlov.on_cms_common.cms.lucene.LuceneContentSvc;
-import cn.onlov.on_cms_common.common.util.DateUtils;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.springmvc.RealPathResolver;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.cms.entity.main.Content;
+import cn.onlov.cms.common.cms.lucene.LuceneContentSvc;
+import cn.onlov.cms.common.common.util.DateUtils;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.springmvc.RealPathResolver;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -79,7 +79,7 @@ public class SearchApiAct {
 			}
 		}
 		try {
-			String path = realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.LUCENE_PATH);
+			String path = realPathResolver.get(cn.onlov.cms.common.cms.Constants.LUCENE_PATH);
 			list = luceneContentSvc.searchList(path, q,category,workplace,
 					siteId, channelId,startDate, endDate, first, count);
 		} catch (Exception e) {

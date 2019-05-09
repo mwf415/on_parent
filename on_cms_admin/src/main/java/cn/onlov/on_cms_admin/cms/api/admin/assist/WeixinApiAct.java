@@ -1,16 +1,16 @@
 package cn.onlov.on_cms_admin.cms.api.admin.assist;
 
 
-import cn.onlov.on_cms_common.cms.annotation.SignValidate;
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.manager.CmsSiteMng;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.plug.weixin.entity.Weixin;
-import cn.onlov.on_cms_common.plug.weixin.manager.WeixinMng;
+import cn.onlov.cms.common.cms.annotation.SignValidate;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.manager.CmsSiteMng;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.plug.weixin.entity.Weixin;
+import cn.onlov.cms.common.plug.weixin.manager.WeixinMng;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,13 +42,13 @@ public class WeixinApiAct {
 		
 		Map<String,String>wxMap=new HashMap<String,String>();
 		if(!StringUtils.isBlank(wxAppkey)){
-			wxMap.put(cn.onlov.on_cms_common.core.Constants.WEIXIN_APPKEY, wxAppkey);
+			wxMap.put(cn.onlov.cms.common.core.Constants.WEIXIN_APPKEY, wxAppkey);
 		}
 		if(!StringUtils.isBlank(wxAppSecret)){
-			wxMap.put(cn.onlov.on_cms_common.core.Constants.WEIXIN_APPSECRET, wxAppSecret);
+			wxMap.put(cn.onlov.cms.common.core.Constants.WEIXIN_APPSECRET, wxAppSecret);
 		}
 		if(!StringUtils.isBlank(wxToken)){
-			wxMap.put(cn.onlov.on_cms_common.core.Constants.WEIXIN_TOKEN, wxToken);
+			wxMap.put(cn.onlov.cms.common.core.Constants.WEIXIN_TOKEN, wxToken);
 		}
 		siteMng.updateAttr(site.getId(), wxMap);
 		if(entity!=null){

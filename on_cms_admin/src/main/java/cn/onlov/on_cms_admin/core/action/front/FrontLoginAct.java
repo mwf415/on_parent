@@ -1,12 +1,12 @@
 package cn.onlov.on_cms_admin.core.action.front;
 
-import cn.onlov.on_cms_common.common.security.BadCredentialsException;
-import cn.onlov.on_cms_common.common.security.UsernameNotFoundException;
-import cn.onlov.on_cms_common.common.web.RequestUtils;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.core.entity.Authentication;
-import cn.onlov.on_cms_common.core.manager.AuthenticationMng;
-import cn.onlov.on_cms_common.core.web.WebCoreErrors;
+import cn.onlov.cms.common.common.security.BadCredentialsException;
+import cn.onlov.cms.common.common.security.UsernameNotFoundException;
+import cn.onlov.cms.common.common.web.RequestUtils;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.core.entity.Authentication;
+import cn.onlov.cms.common.core.manager.AuthenticationMng;
+import cn.onlov.cms.common.core.web.WebCoreErrors;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import static cn.onlov.on_cms_common.core.manager.AuthenticationMng.AUTH_KEY;
+import static cn.onlov.cms.common.core.manager.AuthenticationMng.AUTH_KEY;
 
 /**
  * 统一认证中心Action

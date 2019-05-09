@@ -1,29 +1,29 @@
 package cn.onlov.on_cms_admin.cms.action.front;
 
 
-import cn.onlov.on_cms_common.cms.entity.assist.CmsConfigContentCharge;
-import cn.onlov.on_cms_common.cms.entity.main.Content;
-import cn.onlov.on_cms_common.cms.entity.main.ContentBuy;
-import cn.onlov.on_cms_common.cms.entity.main.ContentCharge;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsConfigContentChargeMng;
-import cn.onlov.on_cms_common.cms.manager.main.ContentBuyMng;
-import cn.onlov.on_cms_common.cms.manager.main.ContentChargeMng;
-import cn.onlov.on_cms_common.cms.manager.main.ContentMng;
-import cn.onlov.on_cms_common.common.page.Pagination;
-import cn.onlov.on_cms_common.common.util.*;
-import cn.onlov.on_cms_common.common.web.Constants;
-import cn.onlov.on_cms_common.common.web.CookieUtils;
-import cn.onlov.on_cms_common.common.web.HttpClientUtil;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.common.web.springmvc.RealPathResolver;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.manager.CmsUserAccountMng;
-import cn.onlov.on_cms_common.core.manager.CmsUserMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.entity.assist.CmsConfigContentCharge;
+import cn.onlov.cms.common.cms.entity.main.Content;
+import cn.onlov.cms.common.cms.entity.main.ContentBuy;
+import cn.onlov.cms.common.cms.entity.main.ContentCharge;
+import cn.onlov.cms.common.cms.manager.assist.CmsConfigContentChargeMng;
+import cn.onlov.cms.common.cms.manager.main.ContentBuyMng;
+import cn.onlov.cms.common.cms.manager.main.ContentChargeMng;
+import cn.onlov.cms.common.cms.manager.main.ContentMng;
+import cn.onlov.cms.common.common.page.Pagination;
+import cn.onlov.cms.common.common.util.*;
+import cn.onlov.cms.common.common.web.Constants;
+import cn.onlov.cms.common.common.web.CookieUtils;
+import cn.onlov.cms.common.common.web.HttpClientUtil;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.common.web.springmvc.RealPathResolver;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.manager.CmsUserAccountMng;
+import cn.onlov.cms.common.core.manager.CmsUserMng;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import com.alipay.api.response.AlipayTradeQueryResponse;
 import net.sf.ehcache.Ehcache;
 import net.sf.ehcache.Element;
@@ -46,8 +46,8 @@ import java.io.UnsupportedEncodingException;
 import java.security.SecureRandom;
 import java.util.*;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_SPECIAL;
-import static cn.onlov.on_cms_common.common.page.SimplePage.cpn;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_SPECIAL;
+import static cn.onlov.cms.common.common.page.SimplePage.cpn;
 
 @Controller
 public class ContentOrderAct {
@@ -615,14 +615,14 @@ public class ContentOrderAct {
 	private void initAliPayUrl(){
 		if(getAliPayUrl()==null){
 			setAliPayUrl(PropertyUtils.getPropertyValue(
-					new File(realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.JEECMS_CONFIG)),ALI_PAY_URL));
+					new File(realPathResolver.get(cn.onlov.cms.common.cms.Constants.JEECMS_CONFIG)),ALI_PAY_URL));
 		}
 	}
 	
 	private void initWeiXinPayUrl(){
 		if(getWeiXinPayUrl()==null){
 			setWeiXinPayUrl(PropertyUtils.getPropertyValue(
-					new File(realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.JEECMS_CONFIG)),WEIXIN_PAY_URL));
+					new File(realPathResolver.get(cn.onlov.cms.common.cms.Constants.JEECMS_CONFIG)),WEIXIN_PAY_URL));
 		}
 	}
 	

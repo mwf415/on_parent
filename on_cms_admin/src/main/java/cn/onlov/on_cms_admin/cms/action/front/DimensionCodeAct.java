@@ -1,7 +1,7 @@
 package cn.onlov.on_cms_admin.cms.action.front;
 
 import com.google.zxing.BarcodeFormat;
-import cn.onlov.on_cms_common.common.util.ZXingCode;
+import cn.onlov.cms.common.common.util.ZXingCode;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

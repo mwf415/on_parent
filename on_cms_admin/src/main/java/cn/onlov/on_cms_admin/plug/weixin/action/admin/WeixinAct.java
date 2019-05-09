@@ -1,15 +1,15 @@
 package cn.onlov.on_cms_admin.plug.weixin.action.admin;
 
-import cn.onlov.on_cms_common.cms.entity.main.Content;
-import cn.onlov.on_cms_common.cms.manager.main.ContentMng;
-import cn.onlov.on_cms_common.cms.service.WeiXinSvc;
-import cn.onlov.on_cms_common.core.Constants;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.manager.CmsSiteMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.plug.weixin.entity.Weixin;
-import cn.onlov.on_cms_common.plug.weixin.manager.WeixinMng;
+import cn.onlov.cms.common.cms.entity.main.Content;
+import cn.onlov.cms.common.cms.manager.main.ContentMng;
+import cn.onlov.cms.common.cms.service.WeiXinSvc;
+import cn.onlov.cms.common.core.Constants;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.manager.CmsSiteMng;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.plug.weixin.entity.Weixin;
+import cn.onlov.cms.common.plug.weixin.manager.WeixinMng;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;

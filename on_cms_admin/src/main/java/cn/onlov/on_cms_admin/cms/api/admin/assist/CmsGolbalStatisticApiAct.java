@@ -1,19 +1,19 @@
 package cn.onlov.on_cms_admin.cms.api.admin.assist;
 
 
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.entity.main.ContentCheck;
-import cn.onlov.on_cms_common.cms.statistic.CmsStatistic;
-import cn.onlov.on_cms_common.cms.statistic.CmsStatistic.TimeRange;
-import cn.onlov.on_cms_common.cms.statistic.CmsStatisticSvc;
-import cn.onlov.on_cms_common.common.util.DateUtils;
-import cn.onlov.on_cms_common.common.util.StrUtils;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.cms.entity.main.ContentCheck;
+import cn.onlov.cms.common.cms.statistic.CmsStatistic;
+import cn.onlov.cms.common.cms.statistic.CmsStatistic.TimeRange;
+import cn.onlov.cms.common.cms.statistic.CmsStatisticSvc;
+import cn.onlov.cms.common.common.util.DateUtils;
+import cn.onlov.cms.common.common.util.StrUtils;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,8 +26,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import static cn.onlov.on_cms_common.cms.statistic.CmsStatistic.SITEID;
-import static cn.onlov.on_cms_common.cms.statistic.CmsStatistic.STATUS;
+import static cn.onlov.cms.common.cms.statistic.CmsStatistic.SITEID;
+import static cn.onlov.cms.common.cms.statistic.CmsStatistic.STATUS;
 
 /**
  * 全局数据统计

@@ -1,17 +1,17 @@
 package cn.onlov.on_cms_admin.cms.action.front;
 
-import cn.onlov.on_cms_common.cms.entity.assist.CmsSearchWords;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsSearchWordsMng;
-import cn.onlov.on_cms_common.cms.service.SearchWordsCache;
-import cn.onlov.on_cms_common.cms.web.Token;
-import cn.onlov.on_cms_common.common.util.StrUtils;
-import cn.onlov.on_cms_common.common.web.RequestUtils;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.entity.assist.CmsSearchWords;
+import cn.onlov.cms.common.cms.manager.assist.CmsSearchWordsMng;
+import cn.onlov.cms.common.cms.service.SearchWordsCache;
+import cn.onlov.cms.common.cms.web.Token;
+import cn.onlov.cms.common.common.util.StrUtils;
+import cn.onlov.cms.common.common.web.RequestUtils;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,7 +30,7 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_SPECIAL;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_SPECIAL;
 
 @Controller
 public class SearchAct {

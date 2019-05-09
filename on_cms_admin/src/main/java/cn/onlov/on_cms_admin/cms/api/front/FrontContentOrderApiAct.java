@@ -1,12 +1,12 @@
 package cn.onlov.on_cms_admin.cms.api.front;
 
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.entity.main.ContentBuy;
-import cn.onlov.on_cms_common.cms.entity.main.ContentCharge;
-import cn.onlov.on_cms_common.cms.manager.main.ContentBuyMng;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.cms.entity.main.ContentBuy;
+import cn.onlov.cms.common.cms.entity.main.ContentCharge;
+import cn.onlov.cms.common.cms.manager.main.ContentBuyMng;
+import cn.onlov.cms.common.common.web.ResponseUtils;
 import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

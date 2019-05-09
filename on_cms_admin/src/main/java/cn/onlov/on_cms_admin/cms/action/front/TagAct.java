@@ -1,10 +1,10 @@
 package cn.onlov.on_cms_admin.cms.action.front;
 
-import cn.onlov.on_cms_common.cms.entity.main.ContentTag;
-import cn.onlov.on_cms_common.cms.manager.main.ContentTagMng;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.entity.main.ContentTag;
+import cn.onlov.cms.common.cms.manager.main.ContentTagMng;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_SPECIAL;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_SPECIAL;
 
 @Controller
 public class TagAct {

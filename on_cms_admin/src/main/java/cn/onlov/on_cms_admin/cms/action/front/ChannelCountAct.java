@@ -1,9 +1,9 @@
 package cn.onlov.on_cms_admin.cms.action.front;
 
-import cn.onlov.on_cms_common.cms.entity.main.Channel;
-import cn.onlov.on_cms_common.cms.manager.main.ChannelMng;
-import cn.onlov.on_cms_common.cms.service.ChannelCountCache;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
+import cn.onlov.cms.common.cms.entity.main.Channel;
+import cn.onlov.cms.common.cms.manager.main.ChannelMng;
+import cn.onlov.cms.common.cms.service.ChannelCountCache;
+import cn.onlov.cms.common.common.web.ResponseUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;

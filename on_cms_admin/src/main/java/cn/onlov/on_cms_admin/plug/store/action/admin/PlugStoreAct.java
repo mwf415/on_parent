@@ -1,14 +1,14 @@
 package cn.onlov.on_cms_admin.plug.store.action.admin;
 
-import cn.onlov.on_cms_common.common.page.Pagination;
-import cn.onlov.on_cms_common.common.security.encoder.Md5PwdEncoder;
-import cn.onlov.on_cms_common.common.web.CookieUtils;
-import cn.onlov.on_cms_common.common.web.HttpClientUtil;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.plug.store.entity.PlugStoreConfig;
-import cn.onlov.on_cms_common.plug.store.entity.StorePlug;
-import cn.onlov.on_cms_common.plug.store.manager.PlugStoreConfigMng;
+import cn.onlov.cms.common.common.page.Pagination;
+import cn.onlov.cms.common.common.security.encoder.Md5PwdEncoder;
+import cn.onlov.cms.common.common.web.CookieUtils;
+import cn.onlov.cms.common.common.web.HttpClientUtil;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.plug.store.entity.PlugStoreConfig;
+import cn.onlov.cms.common.plug.store.entity.StorePlug;
+import cn.onlov.cms.common.plug.store.manager.PlugStoreConfigMng;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.json.JSONArray;
@@ -27,7 +27,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static cn.onlov.on_cms_common.common.page.SimplePage.cpn;
+import static cn.onlov.cms.common.common.page.SimplePage.cpn;
 
 @Controller
 public class PlugStoreAct {

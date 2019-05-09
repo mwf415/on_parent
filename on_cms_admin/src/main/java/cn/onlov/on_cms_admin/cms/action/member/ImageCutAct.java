@@ -1,14 +1,14 @@
 package cn.onlov.on_cms_admin.cms.action.member;
 
-import cn.onlov.on_cms_common.common.image.ImageScale;
-import cn.onlov.on_cms_common.common.upload.FileRepository;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.entity.Ftp;
-import cn.onlov.on_cms_common.core.entity.MemberConfig;
-import cn.onlov.on_cms_common.core.manager.DbFileMng;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.common.image.ImageScale;
+import cn.onlov.cms.common.common.upload.FileRepository;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.entity.Ftp;
+import cn.onlov.cms.common.core.entity.MemberConfig;
+import cn.onlov.cms.common.core.manager.DbFileMng;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_MEMBER;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_MEMBER;
 
 @Controller
 public class ImageCutAct {

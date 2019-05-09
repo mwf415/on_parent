@@ -1,11 +1,11 @@
 package cn.onlov.on_cms_admin.cms.lucene;
 
-import cn.onlov.on_cms_common.cms.entity.main.Channel;
-import cn.onlov.on_cms_common.cms.lucene.LuceneContentSvc;
-import cn.onlov.on_cms_common.cms.manager.main.ChannelMng;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.cms.entity.main.Channel;
+import cn.onlov.cms.common.cms.lucene.LuceneContentSvc;
+import cn.onlov.cms.common.cms.manager.main.ChannelMng;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.store.LockObtainFailedException;

@@ -1,19 +1,19 @@
 package cn.onlov.on_cms_admin.cms.action.member;
 
-import cn.onlov.on_cms_common.cms.entity.assist.CmsWebservice;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsWebserviceMng;
-import cn.onlov.on_cms_common.cms.web.Token;
-import cn.onlov.on_cms_common.common.email.EmailSender;
-import cn.onlov.on_cms_common.common.email.MessageTemplate;
-import cn.onlov.on_cms_common.common.web.RequestUtils;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.common.web.springmvc.MessageResolver;
-import cn.onlov.on_cms_common.core.entity.*;
-import cn.onlov.on_cms_common.core.manager.*;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.entity.assist.CmsWebservice;
+import cn.onlov.cms.common.cms.manager.assist.CmsWebserviceMng;
+import cn.onlov.cms.common.cms.web.Token;
+import cn.onlov.cms.common.common.email.EmailSender;
+import cn.onlov.cms.common.common.email.MessageTemplate;
+import cn.onlov.cms.common.common.web.RequestUtils;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.common.web.springmvc.MessageResolver;
+import cn.onlov.cms.common.core.entity.*;
+import cn.onlov.cms.common.core.manager.*;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
 import org.apache.commons.lang.StringUtils;
@@ -36,7 +36,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_MEMBER;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_MEMBER;
 
 /**
  * 前台会员注册Action

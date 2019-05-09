@@ -1,7 +1,7 @@
 package cn.onlov.on_cms_admin.cms.api.admin.assist;
 
-import cn.onlov.on_cms_common.common.web.HttpClientUtil;
-import cn.onlov.on_cms_common.plug.store.manager.PlugStoreConfigMng;
+import cn.onlov.cms.common.common.web.HttpClientUtil;
+import cn.onlov.cms.common.plug.store.manager.PlugStoreConfigMng;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

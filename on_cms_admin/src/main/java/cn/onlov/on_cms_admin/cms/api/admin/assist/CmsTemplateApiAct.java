@@ -1,25 +1,25 @@
 package cn.onlov.on_cms_admin.cms.api.admin.assist;
 
-import cn.onlov.on_cms_common.cms.annotation.SignValidate;
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.ApiValidate;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.entity.main.CmsModel;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsResourceMng;
-import cn.onlov.on_cms_common.cms.manager.main.CmsModelMng;
-import cn.onlov.on_cms_common.common.util.StrUtils;
-import cn.onlov.on_cms_common.common.util.Zipper;
-import cn.onlov.on_cms_common.common.util.Zipper.FileEntry;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.manager.CmsSiteMng;
-import cn.onlov.on_cms_common.core.tpl.FileTpl;
-import cn.onlov.on_cms_common.core.tpl.Tpl;
-import cn.onlov.on_cms_common.core.tpl.TplManager;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.CoreUtils;
+import cn.onlov.cms.common.cms.annotation.SignValidate;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.ApiValidate;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.cms.entity.main.CmsModel;
+import cn.onlov.cms.common.cms.manager.assist.CmsResourceMng;
+import cn.onlov.cms.common.cms.manager.main.CmsModelMng;
+import cn.onlov.cms.common.common.util.StrUtils;
+import cn.onlov.cms.common.common.util.Zipper;
+import cn.onlov.cms.common.common.util.Zipper.FileEntry;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.manager.CmsSiteMng;
+import cn.onlov.cms.common.core.tpl.FileTpl;
+import cn.onlov.cms.common.core.tpl.Tpl;
+import cn.onlov.cms.common.core.tpl.TplManager;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.CoreUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONArray;
@@ -42,8 +42,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_INDEX;
-import static cn.onlov.on_cms_common.cms.Constants.TPL_BASE;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_INDEX;
+import static cn.onlov.cms.common.cms.Constants.TPL_BASE;
 
 @Controller
 public class CmsTemplateApiAct {
@@ -378,7 +378,7 @@ public class CmsTemplateApiAct {
 			errors=validateList(root, site.getTplPath(), request);
 		}
 		if(!errors.hasErrors()){
-			String name = root + "/" + filename + cn.onlov.on_cms_common.cms.Constants.TPL_SUFFIX;
+			String name = root + "/" + filename + cn.onlov.cms.common.cms.Constants.TPL_SUFFIX;
 			tplManager.save(name, source, false);
 			message=Constants.API_MESSAGE_SUCCESS;
 			code=ResponseCode.API_CODE_CALL_SUCCESS;

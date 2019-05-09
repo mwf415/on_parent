@@ -1,19 +1,19 @@
 package cn.onlov.on_cms_admin.cms.action.front;
 
-import cn.onlov.on_cms_common.cms.entity.assist.CmsComment;
-import cn.onlov.on_cms_common.cms.entity.main.ChannelExt;
-import cn.onlov.on_cms_common.cms.entity.main.Content;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsCommentMng;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsSensitivityMng;
-import cn.onlov.on_cms_common.cms.manager.main.ContentMng;
-import cn.onlov.on_cms_common.common.web.RequestUtils;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.core.entity.CmsConfig;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.entity.assist.CmsComment;
+import cn.onlov.cms.common.cms.entity.main.ChannelExt;
+import cn.onlov.cms.common.cms.entity.main.Content;
+import cn.onlov.cms.common.cms.manager.assist.CmsCommentMng;
+import cn.onlov.cms.common.cms.manager.assist.CmsSensitivityMng;
+import cn.onlov.cms.common.cms.manager.main.ContentMng;
+import cn.onlov.cms.common.common.web.RequestUtils;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.core.entity.CmsConfig;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
 import org.apache.commons.lang.StringUtils;
@@ -32,7 +32,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_SPECIAL;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_SPECIAL;
 
 @Controller
 public class CommentAct {
@@ -124,7 +124,7 @@ public class CommentAct {
 		CmsSite site = CmsUtils.getSite(request);
 		FrontUtils.frontData(request, model, site);
 		return FrontUtils.getTplPath(request, site.getSolutionPath(),
-				cn.onlov.on_cms_common.cms.Constants.TPLDIR_CSI, COMMENT_LIST);
+				cn.onlov.cms.common.cms.Constants.TPLDIR_CSI, COMMENT_LIST);
 	}
 
 	@RequestMapping(value = "/comment.jspx", method = RequestMethod.POST)

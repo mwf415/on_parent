@@ -1,22 +1,22 @@
 package cn.onlov.on_cms_admin.cms.api.admin.assist;
 
-import cn.onlov.on_cms_common.cms.annotation.SignValidate;
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.ApiValidate;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.entity.back.CmsField;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsMysqlDataBackMng;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsResourceMng;
-import cn.onlov.on_cms_common.common.file.FileWrap;
-import cn.onlov.on_cms_common.common.util.DateUtils;
-import cn.onlov.on_cms_common.common.util.StrUtils;
-import cn.onlov.on_cms_common.common.util.Zipper;
-import cn.onlov.on_cms_common.common.util.Zipper.FileEntry;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.springmvc.RealPathResolver;
-import cn.onlov.on_cms_common.core.manager.CmsLogMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
+import cn.onlov.cms.common.cms.annotation.SignValidate;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.ApiValidate;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.cms.entity.back.CmsField;
+import cn.onlov.cms.common.cms.manager.assist.CmsMysqlDataBackMng;
+import cn.onlov.cms.common.cms.manager.assist.CmsResourceMng;
+import cn.onlov.cms.common.common.file.FileWrap;
+import cn.onlov.cms.common.common.util.DateUtils;
+import cn.onlov.cms.common.common.util.StrUtils;
+import cn.onlov.cms.common.common.util.Zipper;
+import cn.onlov.cms.common.common.util.Zipper.FileEntry;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.springmvc.RealPathResolver;
+import cn.onlov.cms.common.core.manager.CmsLogMng;
+import cn.onlov.cms.common.core.web.WebErrors;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONArray;
@@ -135,7 +135,7 @@ public class MysqlDataApiAct {
 	
 	@RequestMapping("/mysql/data/files")
 	public void files(HttpServletRequest request,HttpServletResponse response){
-		List<FileWrap> list = resourceMng.listFile(cn.onlov.on_cms_common.cms.Constants.BACKUP_PATH, false);
+		List<FileWrap> list = resourceMng.listFile(cn.onlov.cms.common.cms.Constants.BACKUP_PATH, false);
 		JSONArray jsonArray = new JSONArray();
 		if (list!=null&&list.size()>0) {
 			for (int i = 0; i < list.size(); i++) {
@@ -160,7 +160,7 @@ public class MysqlDataApiAct {
 		WebErrors errors = WebErrors.create(request);
 		errors = ApiValidate.validateRequiredParams(request, errors, filename,db);
 		if (!errors.hasErrors()) {
-			String backpath = realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.BACKUP_PATH);
+			String backpath = realPathResolver.get(cn.onlov.cms.common.cms.Constants.BACKUP_PATH);
 			String backFilePath = backpath + SLASH +filename;
 			String sql;
 			try {
@@ -199,7 +199,7 @@ public class MysqlDataApiAct {
 		errors = ApiValidate.validateRequiredParams(request, errors, tableNames);
 		if (!errors.hasErrors()) {
 			String[] tableNameArr = tableNames.split(",");
-			String backpath = realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.BACKUP_PATH);
+			String backpath = realPathResolver.get(cn.onlov.cms.common.cms.Constants.BACKUP_PATH);
 			File backDirectory = new File(backpath);
 			if (!backDirectory.exists()) {
 				backDirectory.mkdir();
@@ -262,8 +262,8 @@ public class MysqlDataApiAct {
 		WebErrors errors = WebErrors.create(request);
 		errors= ApiValidate.validateRequiredParams(request, errors, origName,distName);
 		if (!errors.hasErrors()) {
-			String orig = cn.onlov.on_cms_common.cms.Constants.BACKUP_PATH +"/"+ origName;
-			String dist = cn.onlov.on_cms_common.cms.Constants.BACKUP_PATH +"/"+ distName;
+			String orig = cn.onlov.cms.common.cms.Constants.BACKUP_PATH +"/"+ origName;
+			String dist = cn.onlov.cms.common.cms.Constants.BACKUP_PATH +"/"+ distName;
 			errors = fileExist(errors,orig,dist);
 			if (!errors.hasErrors()) {
 				message = errors.getErrors().get(0);
@@ -305,8 +305,8 @@ public class MysqlDataApiAct {
 			if (!errors.hasErrors()) {
 				String backName="back";
 				if(nameArr!=null&&nameArr.length>0&&nameArr[0]!=null){
-					backName=nameArr[0].substring(nameArr[0].indexOf(cn.onlov.on_cms_common.cms.Constants.BACKUP_PATH)
-							+cn.onlov.on_cms_common.cms.Constants.BACKUP_PATH.length()+1);
+					backName=nameArr[0].substring(nameArr[0].indexOf(cn.onlov.cms.common.cms.Constants.BACKUP_PATH)
+							+cn.onlov.cms.common.cms.Constants.BACKUP_PATH.length()+1);
 				}
 				List<FileEntry> fileEntrys = new ArrayList<FileEntry>();
 				response.setContentType("application/x-download;charset=UTF-8");
@@ -334,7 +334,7 @@ public class MysqlDataApiAct {
 		WebErrors errors = WebErrors.create(request);
 		errors = ApiValidate.validateRequiredParams(request, errors, name);
 		if (!errors.hasErrors()) {
-			String origName = name.substring(cn.onlov.on_cms_common.cms.Constants.BACKUP_PATH.length());
+			String origName = name.substring(cn.onlov.cms.common.cms.Constants.BACKUP_PATH.length());
 			body = "{\"origName\":\""+origName+"\"}";
 			message = Constants.API_MESSAGE_SUCCESS;
 			code = ResponseCode.API_CODE_CALL_SUCCESS;
@@ -359,7 +359,7 @@ public class MysqlDataApiAct {
 		if(names!=null&&names.length>0){
 			for(String name:names){
 				//导出阻止非法获取其他目录文件
-				if (!name.contains(cn.onlov.on_cms_common.cms.Constants.BACKUP_PATH)
+				if (!name.contains(cn.onlov.cms.common.cms.Constants.BACKUP_PATH)
 						||name.contains("../")||name.contains("..\\")) {
 					return true;
 				}
@@ -411,12 +411,12 @@ public class MysqlDataApiAct {
 			try {
 				out = new FileOutputStream(file);
 				writer = new OutputStreamWriter(out, "utf8");
-				writer.write(cn.onlov.on_cms_common.cms.Constants.ONESQL_PREFIX + DISABLEFOREIGN);
+				writer.write(cn.onlov.cms.common.cms.Constants.ONESQL_PREFIX + DISABLEFOREIGN);
 				for (int i=0;i<tablenames.length;i++) {
 					backup_table=tablenames[i];
 					backupTable(writer,tablenames[i]);
 				}
-				writer.write(cn.onlov.on_cms_common.cms.Constants.ONESQL_PREFIX + ABLEFOREIGN);
+				writer.write(cn.onlov.cms.common.cms.Constants.ONESQL_PREFIX + ABLEFOREIGN);
 				backup_table="";
 				writer.close();
 				out.close();
@@ -433,11 +433,11 @@ public class MysqlDataApiAct {
 		private String createOneTableSql(String tablename) {
 			StringBuffer buffer = new StringBuffer();
 			Object[] oneResult;
-			buffer.append(cn.onlov.on_cms_common.cms.Constants.ONESQL_PREFIX + "DROP TABLE IF EXISTS "
+			buffer.append(cn.onlov.cms.common.cms.Constants.ONESQL_PREFIX + "DROP TABLE IF EXISTS "
 					+ tablename + BRANCH + BR);
-			buffer.append(cn.onlov.on_cms_common.cms.Constants.ONESQL_PREFIX
+			buffer.append(cn.onlov.cms.common.cms.Constants.ONESQL_PREFIX
 					+ dataBackMng.createTableDDL(tablename) + BRANCH + BR
-					+ cn.onlov.on_cms_common.cms.Constants.ONESQL_PREFIX);
+					+ cn.onlov.cms.common.cms.Constants.ONESQL_PREFIX);
 			List<Object[]> results = dataBackMng.createTableData(tablename);
 			for (int i = 0; i < results.size(); i++) {
 				// one insert sql
@@ -449,7 +449,7 @@ public class MysqlDataApiAct {
 
 		private String createOneInsertSql(Object[] oneResult, String tablename) {
 			StringBuffer buffer = new StringBuffer();
-			buffer.append(cn.onlov.on_cms_common.cms.Constants.ONESQL_PREFIX + INSERT_INTO + SPLIT + tablename
+			buffer.append(cn.onlov.cms.common.cms.Constants.ONESQL_PREFIX + INSERT_INTO + SPLIT + tablename
 					+ SPLIT + SPACE + VALUES + LEFTBRACE);
 			for (int j = 0; j < oneResult.length; j++) {
 				if (oneResult[j] != null) {

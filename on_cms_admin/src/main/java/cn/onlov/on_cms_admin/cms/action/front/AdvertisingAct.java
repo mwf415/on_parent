@@ -1,13 +1,13 @@
 package cn.onlov.on_cms_admin.cms.action.front;
 
 
-import cn.onlov.on_cms_common.cms.entity.assist.CmsAdvertising;
-import cn.onlov.on_cms_common.cms.entity.assist.CmsAdvertisingSpace;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsAdvertisingMng;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsAdvertisingSpaceMng;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.entity.assist.CmsAdvertising;
+import cn.onlov.cms.common.cms.entity.assist.CmsAdvertisingSpace;
+import cn.onlov.cms.common.cms.manager.assist.CmsAdvertisingMng;
+import cn.onlov.cms.common.cms.manager.assist.CmsAdvertisingSpaceMng;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -46,7 +46,7 @@ public class AdvertisingAct {
 		}
 		FrontUtils.frontData(request, model, site);
 		return FrontUtils.getTplPath(request, site.getSolutionPath(),
-				cn.onlov.on_cms_common.cms.Constants.TPLDIR_CSI, TPL_AD);
+				cn.onlov.cms.common.cms.Constants.TPLDIR_CSI, TPL_AD);
 	}
 
 	@RequestMapping(value = "/adspace.jspx")
@@ -61,7 +61,7 @@ public class AdvertisingAct {
 		}
 		FrontUtils.frontData(request, model, site);
 		return FrontUtils.getTplPath(request, site.getSolutionPath(),
-				cn.onlov.on_cms_common.cms.Constants.TPLDIR_CSI, TPL_ADSPACE);
+				cn.onlov.cms.common.cms.Constants.TPLDIR_CSI, TPL_ADSPACE);
 	}
 
 	@RequestMapping(value = "/ad_display.jspx")

@@ -1,17 +1,17 @@
 package cn.onlov.on_cms_admin.cms.action.member;
 
-import cn.onlov.on_cms_common.cms.entity.assist.CmsJobApply;
-import cn.onlov.on_cms_common.cms.entity.main.Content;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsJobApplyMng;
-import cn.onlov.on_cms_common.cms.manager.main.ContentMng;
-import cn.onlov.on_cms_common.common.page.Pagination;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.core.entity.*;
-import cn.onlov.on_cms_common.core.manager.CmsUserExtMng;
-import cn.onlov.on_cms_common.core.manager.CmsUserResumeMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.entity.assist.CmsJobApply;
+import cn.onlov.cms.common.cms.entity.main.Content;
+import cn.onlov.cms.common.cms.manager.assist.CmsJobApplyMng;
+import cn.onlov.cms.common.cms.manager.main.ContentMng;
+import cn.onlov.cms.common.common.page.Pagination;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.core.entity.*;
+import cn.onlov.cms.common.core.manager.CmsUserExtMng;
+import cn.onlov.cms.common.core.manager.CmsUserResumeMng;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,8 +28,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Calendar;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_MEMBER;
-import static cn.onlov.on_cms_common.common.page.SimplePage.cpn;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_MEMBER;
+import static cn.onlov.cms.common.common.page.SimplePage.cpn;
 
 /**
  * 简历中心Action

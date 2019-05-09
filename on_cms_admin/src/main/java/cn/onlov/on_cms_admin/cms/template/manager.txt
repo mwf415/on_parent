@@ -1,6 +1,6 @@
 package #{manager_p};
 
-import cn.onlov.on_cms_common.common.page.Pagination;
+import cn.onlov.cms.common.common.page.Pagination;
 import #{entity_p}.#{Entity};
 
 public interface #{Entity}Mng {

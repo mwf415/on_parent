@@ -1,19 +1,19 @@
 package cn.onlov.on_cms_admin.cms.action.front;
 
-import cn.onlov.on_cms_common.cms.entity.assist.CmsGuestbook;
-import cn.onlov.on_cms_common.cms.entity.assist.CmsGuestbookCtg;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsGuestbookCtgMng;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsGuestbookMng;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsSensitivityMng;
-import cn.onlov.on_cms_common.cms.web.Token;
-import cn.onlov.on_cms_common.common.web.RequestUtils;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.core.entity.CmsConfig;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.entity.assist.CmsGuestbook;
+import cn.onlov.cms.common.cms.entity.assist.CmsGuestbookCtg;
+import cn.onlov.cms.common.cms.manager.assist.CmsGuestbookCtgMng;
+import cn.onlov.cms.common.cms.manager.assist.CmsGuestbookMng;
+import cn.onlov.cms.common.cms.manager.assist.CmsSensitivityMng;
+import cn.onlov.cms.common.cms.web.Token;
+import cn.onlov.cms.common.common.web.RequestUtils;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.core.entity.CmsConfig;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
 import org.json.JSONException;
@@ -31,7 +31,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_SPECIAL;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_SPECIAL;
 
 @Controller
 public class GuestbookAct {

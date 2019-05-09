@@ -1,9 +1,9 @@
 package cn.onlov.on_cms_admin.core.action.front;
 
-import cn.onlov.on_cms_common.common.web.RequestUtils;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.core.entity.Authentication;
-import cn.onlov.on_cms_common.core.manager.AuthenticationMng;
+import cn.onlov.cms.common.common.web.RequestUtils;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.core.entity.Authentication;
+import cn.onlov.cms.common.core.manager.AuthenticationMng;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import static cn.onlov.on_cms_common.core.manager.AuthenticationMng.AUTH_KEY;
+import static cn.onlov.cms.common.core.manager.AuthenticationMng.AUTH_KEY;
 
 /**
  * 登录处理Action

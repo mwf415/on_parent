@@ -1,6 +1,6 @@
 package cn.onlov.on_cms_admin.cms;
 
-import cn.onlov.on_cms_common.common.web.Constants;
+import cn.onlov.cms.common.common.web.Constants;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 

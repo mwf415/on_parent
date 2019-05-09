@@ -1,24 +1,24 @@
 package cn.onlov.on_cms_admin.cms.action.member;
 
-import cn.onlov.on_cms_common.cms.entity.main.*;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsConfigContentChargeMng;
-import cn.onlov.on_cms_common.cms.manager.main.ChannelMng;
-import cn.onlov.on_cms_common.cms.manager.main.CmsModelMng;
-import cn.onlov.on_cms_common.cms.manager.main.ContentMng;
-import cn.onlov.on_cms_common.cms.manager.main.ContentTypeMng;
-import cn.onlov.on_cms_common.cms.staticpage.ContentStatusChangeThread;
-import cn.onlov.on_cms_common.common.page.Pagination;
-import cn.onlov.on_cms_common.common.upload.FileRepository;
-import cn.onlov.on_cms_common.common.util.StrUtils;
-import cn.onlov.on_cms_common.common.web.CookieUtils;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.entity.MemberConfig;
-import cn.onlov.on_cms_common.core.manager.CmsConfigMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.entity.main.*;
+import cn.onlov.cms.common.cms.manager.assist.CmsConfigContentChargeMng;
+import cn.onlov.cms.common.cms.manager.main.ChannelMng;
+import cn.onlov.cms.common.cms.manager.main.CmsModelMng;
+import cn.onlov.cms.common.cms.manager.main.ContentMng;
+import cn.onlov.cms.common.cms.manager.main.ContentTypeMng;
+import cn.onlov.cms.common.cms.staticpage.ContentStatusChangeThread;
+import cn.onlov.cms.common.common.page.Pagination;
+import cn.onlov.cms.common.common.upload.FileRepository;
+import cn.onlov.cms.common.common.util.StrUtils;
+import cn.onlov.cms.common.common.web.CookieUtils;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.entity.MemberConfig;
+import cn.onlov.cms.common.core.manager.CmsConfigMng;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
 import org.apache.commons.lang.StringUtils;
@@ -32,8 +32,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_MEMBER;
-import static cn.onlov.on_cms_common.common.page.SimplePage.cpn;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_MEMBER;
+import static cn.onlov.cms.common.common.page.SimplePage.cpn;
 
 /**
  * @author Tom

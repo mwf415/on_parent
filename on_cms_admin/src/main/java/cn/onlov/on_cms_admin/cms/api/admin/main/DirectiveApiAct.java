@@ -1,20 +1,20 @@
 package cn.onlov.on_cms_admin.cms.api.admin.main;
 
-import cn.onlov.on_cms_common.cms.annotation.SignValidate;
-import cn.onlov.on_cms_common.cms.api.ApiResponse;
-import cn.onlov.on_cms_common.cms.api.ApiValidate;
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.entity.assist.CmsDirectiveTpl;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsDirectiveTplMng;
-import cn.onlov.on_cms_common.common.page.Pagination;
-import cn.onlov.on_cms_common.common.util.StrUtils;
-import cn.onlov.on_cms_common.common.web.RequestUtils;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.springmvc.RealPathResolver;
-import cn.onlov.on_cms_common.core.manager.CmsLogMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.cms.annotation.SignValidate;
+import cn.onlov.cms.common.cms.api.ApiResponse;
+import cn.onlov.cms.common.cms.api.ApiValidate;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.cms.entity.assist.CmsDirectiveTpl;
+import cn.onlov.cms.common.cms.manager.assist.CmsDirectiveTplMng;
+import cn.onlov.cms.common.common.page.Pagination;
+import cn.onlov.cms.common.common.util.StrUtils;
+import cn.onlov.cms.common.common.web.RequestUtils;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.springmvc.RealPathResolver;
+import cn.onlov.cms.common.core.manager.CmsLogMng;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONArray;
@@ -282,7 +282,7 @@ public class DirectiveApiAct {
 		String singleType=(String) params.get("singleType");
 		Boolean list=getBooleanParam(params, "list");
 		Boolean channel=getBooleanParam(params, "channel");
-		filename+=cn.onlov.on_cms_common.cms.Constants.DIRECTIVE_TPL_PATH+CHANNEL+"/";
+		filename+=cn.onlov.cms.common.cms.Constants.DIRECTIVE_TPL_PATH+CHANNEL+"/";
 		if(list){
 			filename+=LIST_PREFIX;
 			if(channel){
@@ -328,7 +328,7 @@ public class DirectiveApiAct {
 	private String getCommonTpl(Map<String,Object>params,String module){
 		String filename="";
 		Boolean page=getBooleanParam(params, "page");
-		filename+=cn.onlov.on_cms_common.cms.Constants.DIRECTIVE_TPL_PATH+module+"/";
+		filename+=cn.onlov.cms.common.cms.Constants.DIRECTIVE_TPL_PATH+module+"/";
 		if(page){
 			filename+=PAGE_PREFIX;
 		}else{
@@ -383,7 +383,7 @@ public class DirectiveApiAct {
 	private String getVoteTpl(Map<String,Object>params){
 		String filename="";
 		Boolean list=getBooleanParam(params, "list");
-		filename+=cn.onlov.on_cms_common.cms.Constants.DIRECTIVE_TPL_PATH+VOTE+"/";
+		filename+=cn.onlov.cms.common.cms.Constants.DIRECTIVE_TPL_PATH+VOTE+"/";
 		if(list){
 			filename+=LIST_PREFIX;
 		}else{
@@ -451,7 +451,7 @@ public class DirectiveApiAct {
 	}
 	
 	private String getLinkTpl(Map<String,Object>params){
-		return cn.onlov.on_cms_common.cms.Constants.DIRECTIVE_TPL_PATH+LINK+"/"+LIST_PREFIX+TPL_SUFFIX;
+		return cn.onlov.cms.common.cms.Constants.DIRECTIVE_TPL_PATH+LINK+"/"+LIST_PREFIX+TPL_SUFFIX;
 	}
 	
 	private Map<String,String> getLinkValue(Map<String,Object>params){
@@ -474,7 +474,7 @@ public class DirectiveApiAct {
 		String singleType=(String) params.get("singleType");
 		Boolean sysTpl=getBooleanParam(params, "sys");
 		String tpl=(String) params.get("tpl");
-		filename+=cn.onlov.on_cms_common.cms.Constants.DIRECTIVE_TPL_PATH+CONTENT+"/";
+		filename+=cn.onlov.cms.common.cms.Constants.DIRECTIVE_TPL_PATH+CONTENT+"/";
 		if(type.equals("single")){
 			filename+=SINGLE_PREFIX+singleType;
 		}else if(type.equals("page")){

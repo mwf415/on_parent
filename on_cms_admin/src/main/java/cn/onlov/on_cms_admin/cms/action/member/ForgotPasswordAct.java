@@ -1,21 +1,21 @@
 package cn.onlov.on_cms_admin.cms.action.member;
 
-import cn.onlov.on_cms_common.cms.api.Constants;
-import cn.onlov.on_cms_common.cms.api.ResponseCode;
-import cn.onlov.on_cms_common.cms.web.Token;
-import cn.onlov.on_cms_common.common.email.EmailSender;
-import cn.onlov.on_cms_common.common.email.MessageTemplate;
-import cn.onlov.on_cms_common.common.security.encoder.PwdEncoder;
-import cn.onlov.on_cms_common.common.web.RequestUtils;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.core.entity.CmsConfig;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.entity.UnifiedUser;
-import cn.onlov.on_cms_common.core.manager.ConfigMng;
-import cn.onlov.on_cms_common.core.manager.UnifiedUserMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.api.Constants;
+import cn.onlov.cms.common.cms.api.ResponseCode;
+import cn.onlov.cms.common.cms.web.Token;
+import cn.onlov.cms.common.common.email.EmailSender;
+import cn.onlov.cms.common.common.email.MessageTemplate;
+import cn.onlov.cms.common.common.security.encoder.PwdEncoder;
+import cn.onlov.cms.common.common.web.RequestUtils;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.core.entity.CmsConfig;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.entity.UnifiedUser;
+import cn.onlov.cms.common.core.manager.ConfigMng;
+import cn.onlov.cms.common.core.manager.UnifiedUserMng;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
 import org.apache.commons.lang.StringUtils;
@@ -32,7 +32,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.Serializable;
 import java.util.Date;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_MEMBER;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_MEMBER;
 
 /**
  * 找回密码Action

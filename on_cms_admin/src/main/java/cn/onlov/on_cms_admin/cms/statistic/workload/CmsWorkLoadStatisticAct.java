@@ -1,17 +1,17 @@
 package cn.onlov.on_cms_admin.cms.statistic.workload;
 
-import cn.onlov.on_cms_common.cms.entity.main.Channel;
-import cn.onlov.on_cms_common.cms.manager.main.ChannelMng;
-import cn.onlov.on_cms_common.cms.statistic.CmsStatistic.*;
-import cn.onlov.on_cms_common.cms.statistic.CmsStatisticSvc;
-import cn.onlov.on_cms_common.cms.statistic.workload.CmsWorkLoadStatistic;
-import cn.onlov.on_cms_common.cms.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticDateKind;
-import cn.onlov.on_cms_common.cms.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticGroup;
-import cn.onlov.on_cms_common.cms.statistic.workload.CmsWorkLoadStatisticSvc;
-import cn.onlov.on_cms_common.common.util.DateUtils;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.manager.CmsUserMng;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.cms.entity.main.Channel;
+import cn.onlov.cms.common.cms.manager.main.ChannelMng;
+import cn.onlov.cms.common.cms.statistic.CmsStatistic.*;
+import cn.onlov.cms.common.cms.statistic.CmsStatisticSvc;
+import cn.onlov.cms.common.cms.statistic.workload.CmsWorkLoadStatistic;
+import cn.onlov.cms.common.cms.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticDateKind;
+import cn.onlov.cms.common.cms.statistic.workload.CmsWorkLoadStatistic.CmsWorkLoadStatisticGroup;
+import cn.onlov.cms.common.cms.statistic.workload.CmsWorkLoadStatisticSvc;
+import cn.onlov.cms.common.common.util.DateUtils;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.manager.CmsUserMng;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import static cn.onlov.on_cms_common.cms.statistic.CmsStatistic.*;
+import static cn.onlov.cms.common.cms.statistic.CmsStatistic.*;
 
 /**
  * @author Tom

@@ -1,20 +1,20 @@
 package cn.onlov.on_cms_admin.cms.action.member;
 
 
-import cn.onlov.on_cms_common.cms.entity.assist.CmsConfigContentCharge;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsConfigContentChargeMng;
-import cn.onlov.on_cms_common.common.util.PropertyUtils;
-import cn.onlov.on_cms_common.common.web.HttpClientUtil;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.common.web.springmvc.RealPathResolver;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.entity.MemberConfig;
-import cn.onlov.on_cms_common.core.manager.CmsUserAccountMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.entity.assist.CmsConfigContentCharge;
+import cn.onlov.cms.common.cms.manager.assist.CmsConfigContentChargeMng;
+import cn.onlov.cms.common.common.util.PropertyUtils;
+import cn.onlov.cms.common.common.web.HttpClientUtil;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.common.web.springmvc.RealPathResolver;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.entity.MemberConfig;
+import cn.onlov.cms.common.core.manager.CmsUserAccountMng;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,7 +31,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_MEMBER;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_MEMBER;
 
 
 /**
@@ -81,7 +81,7 @@ public class WeiXinAuthAct {
 		String codeUrl="";
 		if(getWeixinAuthCodeUrl()==null){
 			codeUrl=PropertyUtils.getPropertyValue(
-					new File(realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.JEECMS_CONFIG)),WEIXIN_AUTH_CODE_URL);
+					new File(realPathResolver.get(cn.onlov.cms.common.cms.Constants.JEECMS_CONFIG)),WEIXIN_AUTH_CODE_URL);
 			setWeixinAuthCodeUrl(codeUrl);
 		}
 		CmsConfigContentCharge config=configContentChargeMng.getDefault();
@@ -120,7 +120,7 @@ public class WeiXinAuthAct {
 		}
 		if(getWeixinAuthTokenUrl()==null){
 			setWeixinAuthTokenUrl(PropertyUtils.getPropertyValue(
-					new File(realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.JEECMS_CONFIG)),WEIXIN_AUTH_TOKEN_URL));
+					new File(realPathResolver.get(cn.onlov.cms.common.cms.Constants.JEECMS_CONFIG)),WEIXIN_AUTH_TOKEN_URL));
 		}
 		CmsConfigContentCharge config=configContentChargeMng.getDefault();
 		String tokenUrl=getWeixinAuthTokenUrl()+"&appid="+config.getWeixinAppId()+"&secret="+config.getWeixinSecret()+"&code="+code;
@@ -166,7 +166,7 @@ public class WeiXinAuthAct {
 		JSONObject json=new JSONObject();
 		if(getWeixinAuthCodeUrl()==null){
 			codeUrl=PropertyUtils.getPropertyValue(
-					new File(realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.JEECMS_CONFIG)),WEIXIN_AUTH_CODE_URL);
+					new File(realPathResolver.get(cn.onlov.cms.common.cms.Constants.JEECMS_CONFIG)),WEIXIN_AUTH_CODE_URL);
 			setWeixinAuthCodeUrl(codeUrl);
 		}
 		CmsConfigContentCharge config=configContentChargeMng.getDefault();
@@ -202,7 +202,7 @@ public class WeiXinAuthAct {
 		FrontUtils.frontData(request, model, site);
 		if(getWeixinAuthTokenUrl()==null){
 			setWeixinAuthTokenUrl(PropertyUtils.getPropertyValue(
-					new File(realPathResolver.get(cn.onlov.on_cms_common.cms.Constants.JEECMS_CONFIG)),WEIXIN_AUTH_TOKEN_URL));
+					new File(realPathResolver.get(cn.onlov.cms.common.cms.Constants.JEECMS_CONFIG)),WEIXIN_AUTH_TOKEN_URL));
 		}
 		CmsConfigContentCharge config=configContentChargeMng.getDefault();
 		String tokenUrl=getWeixinAuthTokenUrl()+"&appid="+config.getWeixinAppId()+"&secret="+config.getWeixinSecret()+"&code="+code;

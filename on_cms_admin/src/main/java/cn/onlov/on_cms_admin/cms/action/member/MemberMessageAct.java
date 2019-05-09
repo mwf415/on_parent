@@ -1,20 +1,20 @@
 package cn.onlov.on_cms_admin.cms.action.member;
 
-import cn.onlov.on_cms_common.cms.entity.assist.CmsMessage;
-import cn.onlov.on_cms_common.cms.entity.assist.CmsReceiverMessage;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsMessageMng;
-import cn.onlov.on_cms_common.cms.manager.assist.CmsReceiverMessageMng;
-import cn.onlov.on_cms_common.common.page.Pagination;
-import cn.onlov.on_cms_common.common.web.CookieUtils;
-import cn.onlov.on_cms_common.common.web.ResponseUtils;
-import cn.onlov.on_cms_common.common.web.session.SessionProvider;
-import cn.onlov.on_cms_common.core.entity.CmsSite;
-import cn.onlov.on_cms_common.core.entity.CmsUser;
-import cn.onlov.on_cms_common.core.entity.MemberConfig;
-import cn.onlov.on_cms_common.core.manager.CmsUserMng;
-import cn.onlov.on_cms_common.core.web.WebErrors;
-import cn.onlov.on_cms_common.core.web.util.CmsUtils;
-import cn.onlov.on_cms_common.core.web.util.FrontUtils;
+import cn.onlov.cms.common.cms.entity.assist.CmsMessage;
+import cn.onlov.cms.common.cms.entity.assist.CmsReceiverMessage;
+import cn.onlov.cms.common.cms.manager.assist.CmsMessageMng;
+import cn.onlov.cms.common.cms.manager.assist.CmsReceiverMessageMng;
+import cn.onlov.cms.common.common.page.Pagination;
+import cn.onlov.cms.common.common.web.CookieUtils;
+import cn.onlov.cms.common.common.web.ResponseUtils;
+import cn.onlov.cms.common.common.web.session.SessionProvider;
+import cn.onlov.cms.common.core.entity.CmsSite;
+import cn.onlov.cms.common.core.entity.CmsUser;
+import cn.onlov.cms.common.core.entity.MemberConfig;
+import cn.onlov.cms.common.core.manager.CmsUserMng;
+import cn.onlov.cms.common.core.web.WebErrors;
+import cn.onlov.cms.common.core.web.util.CmsUtils;
+import cn.onlov.cms.common.core.web.util.FrontUtils;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
 import org.json.JSONException;
@@ -33,8 +33,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import static cn.onlov.on_cms_common.cms.Constants.TPLDIR_MESSAGE;
-import static cn.onlov.on_cms_common.common.page.SimplePage.cpn;
+import static cn.onlov.cms.common.cms.Constants.TPLDIR_MESSAGE;
+import static cn.onlov.cms.common.common.page.SimplePage.cpn;
 
 /**
  * 站内信Action

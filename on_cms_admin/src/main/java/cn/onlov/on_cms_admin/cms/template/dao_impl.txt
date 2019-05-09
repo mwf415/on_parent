@@ -3,8 +3,8 @@ package #{dao_impl_p};
 import org.hibernate.Criteria;
 import org.springframework.stereotype.Repository;
 
-import cn.onlov.on_cms_common.common.hibernate4.HibernateBaseDao;
-import cn.onlov.on_cms_common.common.page.Pagination;
+import cn.onlov.cms.common.common.hibernate4.HibernateBaseDao;
+import cn.onlov.cms.common.common.page.Pagination;
 import #{dao_p}.#{Entity}Dao;
 import #{entity_p}.#{Entity};
 
