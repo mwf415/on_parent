@@ -16,12 +16,15 @@ public class OnCmsAdminApplication extends SpringBootServletInitializer {
     }
 
 //
+//    @Autowired
+//    private EntityManagerFactory entityManagerFactory;
+//
 //    @Bean
-//    public SessionFactory sessionFactory(HibernateEntityManagerFactory hemf) {
-//        return hemf.getSessionFactory();
+//    public SessionFactory getSessionFactory() {
+//        if (entityManagerFactory.unwrap(SessionFactory.class) == null) {
+//            throw new NullPointerException("factory is not a hibernate factory");
+//        }
+//        return entityManagerFactory.unwrap(SessionFactory.class);
 //    }
-
-
-
 
 }
