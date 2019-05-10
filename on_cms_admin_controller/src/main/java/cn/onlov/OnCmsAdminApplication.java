@@ -1,24 +1,27 @@
 package cn.onlov;
 
-import org.hibernate.SessionFactory;
-import org.hibernate.jpa.HibernateEntityManagerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
-import org.springframework.context.annotation.Bean;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SpringBootApplication
-@ServletComponentScan
-public class OnCmsAdminApplication {
+@ServletComponentScan(basePackages = "cn.onlov.cms")
+@EnableWebMvc
+public class OnCmsAdminApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(OnCmsAdminApplication.class, args);
     }
 
+//
+//    @Bean
+//    public SessionFactory sessionFactory(HibernateEntityManagerFactory hemf) {
+//        return hemf.getSessionFactory();
+//    }
 
-    @Bean
-    public SessionFactory sessionFactory(HibernateEntityManagerFactory hemf){
-        return hemf.getSessionFactory();
-}
+
+
 
 }
