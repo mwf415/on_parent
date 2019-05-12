@@ -1,32 +1,32 @@
-spring:
-#  profiles:
-#    active: product
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://152.136.89.58:3306/?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
-    username: root
-    password: mwf415
-    tomcat:
-      max-active: 20
-      max-idle: 8
-      min-idle: 8
-      initial-size: 20
-  jpa:
-    hibernate:
-      ddl-auto: update
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-
-
-    show-sql: true
-    database: mysql
-
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: UTC
-
-  main:
-    allow-bean-definition-overriding: true
-
-
-    
+#spring:
+##  profiles:
+##    active: product
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://152.136.89.58:3306/?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+#    username: root
+#    password: mwf415
+#    tomcat:
+#      max-active: 20
+#      max-idle: 8
+#      min-idle: 8
+#      initial-size: 20
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#
+#
+#    show-sql: true
+#    database: mysql
+#
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    time-zone: UTC
+#
+#  main:
+#    allow-bean-definition-overriding: true
+#
+#
+#    
